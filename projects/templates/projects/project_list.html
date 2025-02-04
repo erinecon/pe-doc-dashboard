@@ -1,30 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="wrapper">
     <table class="table-auto">
 
         <tr class="headings">
-            <th scope="col">Project</th>
+            <th class="sticky" scope="col">Project</th>
             <th scope="col">Owner</th>
             <th scope="col">Driver</th>
-            <th scope="col">Quality indicator</th>
             <th scope="col">Last review</th>
+            {% for workcycle in workcycle_list %}
+            <th scope="col">
+                <a href="{% url 'admin:framework_workcycle_change' workcycle.id %}">QI {{ workcycle.name }}</a>
+            </th>
+            {% endfor %}
+            <th scope="col">Quality indicator</th>
             <th scope="col">Expectations review</th>
             {% for objective in objective_list %}
-            <th scope="col">
-                <a href="{% url 'admin:framework_objective_change' objective.id %}">{{ objective.name }}</a>
-            </th>
+                <th scope="col">
+                    <a href="{% url 'admin:framework_objective_change' objective.id %}">{{ objective.name }}</a>
+                </th>
             {% endfor %}
         </tr>
 
         {% for project in object_list %}
             <tr>
-                <th scope="row"><a href="{% url 'admin:projects_project_change' project.id %}">{{ project }}</a></th>
+                <th class="sticky" scope="row"><a href="{% url 'admin:projects_project_change' project.id %}">{{ project }}</a></th>
                 <td><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.owner }}</a></td>
                 <td><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.driver }}</a></td>
-                <td><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.quality_indicator }}</a></td>
                 <td class="{{ project.review_freshness }}"><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.last_review|default:"never" }}</a></td>
+                
+                {% for qi in project.quality_history %}<td>{{ qi.value }}</td>{% endfor %}
+                
+                <td><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.quality_indicator }}</a></td>
                 <td class="{{ project.last_review_status|slugify }}"><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.last_review_status }}</a></td>
+                
                 {% for objective in project.projectobjective_set.all %}
                     <td class="{{ objective.status_slug }}">
                         <a href="{% url 'admin:projects_projectobjective_change' objective.id %}">
@@ -32,8 +42,10 @@
                         </a>
                     </td>
                 {% endfor %}
+                
             </tr>
         {% endfor %}
 
     </table>
+</div>    
 {% endblock %}

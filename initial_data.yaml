@@ -5,7 +5,7 @@
 - model: framework.projectstatus
   pk: 2
   fields:
-    name: Unreviewed
+    name: Needs work
 - model: framework.projectstatus
   pk: 3
   fields:
@@ -13,16 +13,16 @@
 - model: framework.projectstatus
   pk: 4
   fields:
-    name: Needs work
+    name: Mostly met
 - model: framework.projectstatus
   pk: 5
   fields:
-    name: Paused
+    name: Unmet
 - model: framework.level
   pk: 1
   fields:
     name: Started
-    value: 3
+    value: 1
 - model: framework.level
   pk: 2
   fields:
@@ -36,2224 +36,4215 @@
 - model: framework.workcycle
   pk: 1
   fields:
-    name: '24.10'
+    name: '24.04'
 - model: framework.workcycle
   pk: 2
   fields:
-    name: '25.04'
+    name: '24.10'
 - model: framework.objectivegroup
   pk: 1
   fields:
-    name: Posture
+    name: Charm
 - model: framework.objectivegroup
   pk: 2
   fields:
-    name: Fundamentals
+    name: Human friendliness
 - model: framework.objectivegroup
   pk: 3
   fields:
-    name: Checks and automation
+    name: Physical characteristics
 - model: framework.objectivegroup
   pk: 4
   fields:
-    name: The public
+    name: Interestingness
 - model: framework.objectivegroup
   pk: 5
   fields:
-    name: Topics
+    name: Basic acceptability
 - model: framework.objective
   pk: 1
   fields:
-    name: Diátaxis framework adoption
-    group: 2
+    name: Colourfulness
+    description: Colourfulness should be developed and maintained in accordance with
+      the established agreements on colour.
+    group: 1
     weight: 1
 - model: framework.objective
   pk: 2
   fields:
-    name: Home page
-    group: 2
-    weight: 1
+    name: Sound
+    description: null
+    group: 1
+    weight: 5
 - model: framework.objective
   pk: 3
   fields:
-    name: Release notes
-    group: 1
-    weight: 1
+    name: Safety
+    description: null
+    group: 2
+    weight: 6
 - model: framework.objective
   pk: 4
   fields:
-    name: Maintenance policy
-    group: 1
-    weight: 1
+    name: Hardness
+    description: null
+    group: 3
+    weight: 2
 - model: framework.objective
   pk: 5
   fields:
-    name: Content alignment
-    group: 1
-    weight: 1
+    name: Obedience
+    description: null
+    group: 2
+    weight: 4
 - model: framework.objective
   pk: 6
   fields:
-    name: Landing pages
-    group: 2
-    weight: 1
+    name: Weight
+    description: null
+    group: 3
+    weight: 3
 - model: framework.objective
   pk: 7
   fields:
-    name: Versions
-    group: 2
-    weight: 1
+    name: Agreeableness
+    description: Agreeableness is an on-going commitment rather than a one-off achievement.
+      Once attained, it must be actively maintained.
+    group: 1
+    weight: 2
 - model: framework.objective
   pk: 8
   fields:
-    name: Tutorial
-    group: 2
-    weight: 1
+    name: Drama
+    description: null
+    group: 4
+    weight: 4
 - model: framework.objective
   pk: 9
   fields:
-    name: Inclusive language
-    group: 3
-    weight: 1
+    name: Hygiene
+    description: null
+    group: 5
+    weight: 3
 - model: framework.objective
   pk: 10
   fields:
-    name: Style guide
+    name: Taste
+    description: null
     group: 3
-    weight: 1
+    weight: 2
 - model: framework.objective
   pk: 11
   fields:
-    name: Automated spelling checks
-    group: 3
+    name: Handling
+    description: null
+    group: 2
     weight: 1
-- model: framework.objective
-  pk: 12
-  fields:
-    name: Automated quality controls
-    group: 3
-    weight: 1
-- model: framework.objective
-  pk: 13
-  fields:
-    name: Project governance
-    group: 4
-    weight: 1
-- model: framework.objective
-  pk: 14
-  fields:
-    name: Feedback mechanism
-    group: 4
-    weight: 1
-- model: framework.objective
-  pk: 15
-  fields:
-    name: Test
-    group: 5
-    weight: 2
 - model: framework.condition
   pk: 1
   fields:
-    name: The team understands the framework and uses it.
+    name: Has blue
     objective: 1
     level: 1
 - model: framework.condition
   pk: 2
   fields:
-    name: New material is created according to Diátaxis principles.
+    name: Has green
     objective: 1
     level: 1
 - model: framework.condition
   pk: 3
   fields:
-    name: The documentation manifests the Diátaxis structure.
+    name: Has red
     objective: 1
-    level: 2
+    level: 1
 - model: framework.condition
   pk: 4
   fields:
-    name: Work has begun to adopt the standard model.
-    objective: 2
-    level: 1
+    name: Is striated
+    objective: 1
+    level: 2
 - model: framework.condition
   pk: 5
   fields:
-    name: The home page of the documentation closely follows the standard model (not
-      necessarily including the
-    objective: 2
+    name: Is dappled
+    objective: 1
     level: 2
 - model: framework.condition
   pk: 6
   fields:
-    name: The home page of the documentation also includes the Diátaxis-related sections.
-    objective: 2
+    name: Demonstrates good taste
+    objective: 1
     level: 3
 - model: framework.condition
   pk: 7
   fields:
-    name: The engineering and product team have worked together on alignment discovery.
-    objective: 5
+    name: Doesn't rattle
+    objective: 2
     level: 1
 - model: framework.condition
   pk: 8
   fields:
-    name: Test
-    objective: 15
+    name: Emits a pleasant hum
+    objective: 2
     level: 2
+- model: framework.condition
+  pk: 9
+  fields:
+    name: Howls when shaken
+    objective: 2
+    level: 3
+- model: framework.condition
+  pk: 10
+  fields:
+    name: Screeches piercingly when turning corners
+    objective: 2
+    level: 3
+- model: framework.condition
+  pk: 11
+  fields:
+    name: Does not explode
+    objective: 3
+    level: 1
+- model: framework.condition
+  pk: 12
+  fields:
+    name: Ignores provocation
+    objective: 3
+    level: 1
+- model: framework.condition
+  pk: 13
+  fields:
+    name: Does not leak
+    objective: 3
+    level: 2
+- model: framework.condition
+  pk: 14
+  fields:
+    name: Smoke is non-toxic
+    objective: 3
+    level: 3
+- model: framework.condition
+  pk: 15
+  fields:
+    name: Harder than chalk
+    objective: 4
+    level: 1
+- model: framework.condition
+  pk: 16
+  fields:
+    name: Harder than iron
+    objective: 4
+    level: 2
+- model: framework.condition
+  pk: 17
+  fields:
+    name: Harder than diamond
+    objective: 4
+    level: 3
+- model: framework.condition
+  pk: 18
+  fields:
+    name: Obeys local customs
+    objective: 5
+    level: 1
+- model: framework.condition
+  pk: 19
+  fields:
+    name: Obeys physical law
+    objective: 5
+    level: 2
+- model: framework.condition
+  pk: 20
+  fields:
+    name: Obeys moral law
+    objective: 5
+    level: 3
+- model: framework.condition
+  pk: 21
+  fields:
+    name: Weighs less than a horse
+    objective: 6
+    level: 1
+- model: framework.condition
+  pk: 22
+  fields:
+    name: Weighs less than a goat
+    objective: 6
+    level: 2
+- model: framework.condition
+  pk: 23
+  fields:
+    name: Weighs less than a mouse
+    objective: 6
+    level: 3
+- model: framework.condition
+  pk: 24
+  fields:
+    name: Speaks pleasantly
+    objective: 7
+    level: 1
+- model: framework.condition
+  pk: 25
+  fields:
+    name: Apologises with sincerity
+    objective: 7
+    level: 3
+- model: framework.condition
+  pk: 26
+  fields:
+    name: Accepts praise and thanks with grace
+    objective: 7
+    level: 2
+- model: framework.condition
+  pk: 27
+  fields:
+    name: Wails and howls when thwarted
+    objective: 8
+    level: 3
+- model: framework.condition
+  pk: 28
+  fields:
+    name: Sulks energetically
+    objective: 8
+    level: 1
+- model: framework.condition
+  pk: 29
+  fields:
+    name: Is willing to pick interesting fights
+    objective: 8
+    level: 2
+- model: framework.condition
+  pk: 30
+  fields:
+    name: Doesn't sulk too long
+    objective: 8
+    level: 2
+- model: framework.condition
+  pk: 31
+  fields:
+    name: Washes hands before eating
+    objective: 9
+    level: 1
+- model: framework.condition
+  pk: 32
+  fields:
+    name: Coughs into a handkerchief
+    objective: 9
+    level: 2
+- model: framework.condition
+  pk: 33
+  fields:
+    name: Demonstrates antibacterial attitude
+    objective: 9
+    level: 3
+- model: framework.condition
+  pk: 34
+  fields:
+    name: Doesn't taste too metallic
+    objective: 10
+    level: 1
+- model: framework.condition
+  pk: 35
+  fields:
+    name: Has a balanced flavour
+    objective: 10
+    level: 2
+- model: framework.condition
+  pk: 36
+  fields:
+    name: Has a completely new flavour
+    objective: 10
+    level: 3
+- model: framework.condition
+  pk: 37
+  fields:
+    name: Is pocket-sized
+    objective: 11
+    level: 1
+- model: framework.condition
+  pk: 38
+  fields:
+    name: Doesn't tear holes in clothes
+    objective: 11
+    level: 1
+- model: framework.condition
+  pk: 39
+  fields:
+    name: Has rubber grips
+    objective: 11
+    level: 2
+- model: framework.condition
+  pk: 40
+  fields:
+    name: Has wheels
+    objective: 11
+    level: 3
 - model: projects.levelcommitment
   pk: 1
   fields:
     work_cycle: 1
-    project_objective: 1
+    project: 2
+    objective: 7
     committed: true
     level: 1
 - model: projects.levelcommitment
   pk: 2
   fields:
     work_cycle: 1
-    project_objective: 1
+    project: 2
+    objective: 1
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 3
   fields:
-    work_cycle: 2
-    project_objective: 1
+    work_cycle: 1
+    project: 2
+    objective: 2
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 4
   fields:
-    work_cycle: 2
-    project_objective: 1
+    work_cycle: 1
+    project: 2
+    objective: 11
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 5
   fields:
-    work_cycle: 2
-    project_objective: 1
+    work_cycle: 1
+    project: 2
+    objective: 5
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 6
   fields:
-    work_cycle: 2
-    project_objective: 2
+    work_cycle: 1
+    project: 2
+    objective: 3
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 7
   fields:
-    work_cycle: 2
-    project_objective: 2
+    work_cycle: 1
+    project: 2
+    objective: 4
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 8
   fields:
-    work_cycle: 2
-    project_objective: 2
+    work_cycle: 1
+    project: 2
+    objective: 10
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 9
   fields:
-    work_cycle: 2
-    project_objective: 3
+    work_cycle: 1
+    project: 2
+    objective: 6
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 10
   fields:
-    work_cycle: 2
-    project_objective: 3
+    work_cycle: 1
+    project: 2
+    objective: 8
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 11
   fields:
-    work_cycle: 2
-    project_objective: 3
+    work_cycle: 1
+    project: 2
+    objective: 9
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 12
   fields:
-    work_cycle: 2
-    project_objective: 4
+    work_cycle: 1
+    project: 1
+    objective: 7
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 13
   fields:
-    work_cycle: 2
-    project_objective: 4
+    work_cycle: 1
+    project: 1
+    objective: 1
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 14
   fields:
-    work_cycle: 2
-    project_objective: 4
+    work_cycle: 1
+    project: 1
+    objective: 2
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 15
   fields:
     work_cycle: 1
-    project_objective: 1
+    project: 1
+    objective: 11
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 16
   fields:
     work_cycle: 1
-    project_objective: 2
+    project: 1
+    objective: 5
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 17
   fields:
     work_cycle: 1
-    project_objective: 2
+    project: 1
+    objective: 3
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 18
   fields:
     work_cycle: 1
-    project_objective: 2
+    project: 1
+    objective: 4
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 19
   fields:
     work_cycle: 1
-    project_objective: 3
+    project: 1
+    objective: 10
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 20
   fields:
     work_cycle: 1
-    project_objective: 3
+    project: 1
+    objective: 6
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 21
   fields:
     work_cycle: 1
-    project_objective: 3
+    project: 1
+    objective: 8
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 22
   fields:
     work_cycle: 1
-    project_objective: 4
+    project: 1
+    objective: 9
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 23
   fields:
     work_cycle: 1
-    project_objective: 4
+    project: 6
+    objective: 7
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 24
   fields:
     work_cycle: 1
-    project_objective: 4
+    project: 6
+    objective: 1
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 25
   fields:
-    work_cycle: 2
-    project_objective: 9
+    work_cycle: 1
+    project: 6
+    objective: 2
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 26
   fields:
-    work_cycle: 2
-    project_objective: 9
+    work_cycle: 1
+    project: 6
+    objective: 11
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 27
   fields:
-    work_cycle: 2
-    project_objective: 9
+    work_cycle: 1
+    project: 6
+    objective: 5
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 28
   fields:
-    work_cycle: 2
-    project_objective: 7
+    work_cycle: 1
+    project: 6
+    objective: 3
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 29
   fields:
-    work_cycle: 2
-    project_objective: 7
+    work_cycle: 1
+    project: 6
+    objective: 4
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 30
   fields:
-    work_cycle: 2
-    project_objective: 7
+    work_cycle: 1
+    project: 6
+    objective: 10
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 31
   fields:
-    work_cycle: 2
-    project_objective: 5
+    work_cycle: 1
+    project: 6
+    objective: 6
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 32
   fields:
-    work_cycle: 2
-    project_objective: 5
+    work_cycle: 1
+    project: 6
+    objective: 8
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 33
   fields:
-    work_cycle: 2
-    project_objective: 5
+    work_cycle: 1
+    project: 6
+    objective: 9
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 34
   fields:
-    work_cycle: 2
-    project_objective: 11
+    work_cycle: 1
+    project: 3
+    objective: 7
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 35
   fields:
-    work_cycle: 2
-    project_objective: 11
+    work_cycle: 1
+    project: 3
+    objective: 1
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 36
   fields:
-    work_cycle: 2
-    project_objective: 11
+    work_cycle: 1
+    project: 3
+    objective: 2
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 37
   fields:
-    work_cycle: 2
-    project_objective: 15
+    work_cycle: 1
+    project: 3
+    objective: 11
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 38
   fields:
-    work_cycle: 2
-    project_objective: 15
+    work_cycle: 1
+    project: 3
+    objective: 5
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 39
   fields:
-    work_cycle: 2
-    project_objective: 15
+    work_cycle: 1
+    project: 3
+    objective: 3
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 40
   fields:
-    work_cycle: 2
-    project_objective: 13
+    work_cycle: 1
+    project: 3
+    objective: 4
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 41
   fields:
-    work_cycle: 2
-    project_objective: 13
+    work_cycle: 1
+    project: 3
+    objective: 10
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 42
   fields:
-    work_cycle: 2
-    project_objective: 13
+    work_cycle: 1
+    project: 3
+    objective: 6
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 43
   fields:
-    work_cycle: 2
-    project_objective: 23
+    work_cycle: 1
+    project: 3
+    objective: 8
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 44
   fields:
-    work_cycle: 2
-    project_objective: 23
+    work_cycle: 1
+    project: 3
+    objective: 9
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 45
   fields:
-    work_cycle: 2
-    project_objective: 23
+    work_cycle: 1
+    project: 7
+    objective: 7
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 46
   fields:
-    work_cycle: 2
-    project_objective: 21
+    work_cycle: 1
+    project: 7
+    objective: 1
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 47
   fields:
-    work_cycle: 2
-    project_objective: 21
+    work_cycle: 1
+    project: 7
+    objective: 2
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 48
   fields:
-    work_cycle: 2
-    project_objective: 21
+    work_cycle: 1
+    project: 7
+    objective: 11
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 49
   fields:
-    work_cycle: 2
-    project_objective: 17
+    work_cycle: 1
+    project: 7
+    objective: 5
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 50
   fields:
-    work_cycle: 2
-    project_objective: 17
+    work_cycle: 1
+    project: 7
+    objective: 3
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 51
   fields:
-    work_cycle: 2
-    project_objective: 17
+    work_cycle: 1
+    project: 7
+    objective: 4
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 52
   fields:
-    work_cycle: 2
-    project_objective: 19
+    work_cycle: 1
+    project: 7
+    objective: 10
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 53
   fields:
-    work_cycle: 2
-    project_objective: 19
+    work_cycle: 1
+    project: 7
+    objective: 6
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 54
   fields:
-    work_cycle: 2
-    project_objective: 19
+    work_cycle: 1
+    project: 7
+    objective: 8
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 55
   fields:
-    work_cycle: 2
-    project_objective: 27
+    work_cycle: 1
+    project: 7
+    objective: 9
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 56
   fields:
-    work_cycle: 2
-    project_objective: 27
+    work_cycle: 1
+    project: 5
+    objective: 7
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 57
   fields:
-    work_cycle: 2
-    project_objective: 27
+    work_cycle: 1
+    project: 5
+    objective: 1
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 58
   fields:
-    work_cycle: 2
-    project_objective: 25
+    work_cycle: 1
+    project: 5
+    objective: 2
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 59
   fields:
-    work_cycle: 2
-    project_objective: 25
+    work_cycle: 1
+    project: 5
+    objective: 11
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 60
   fields:
-    work_cycle: 2
-    project_objective: 25
+    work_cycle: 1
+    project: 5
+    objective: 5
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 61
   fields:
-    work_cycle: 2
-    project_objective: 85
+    work_cycle: 1
+    project: 5
+    objective: 3
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 62
   fields:
-    work_cycle: 2
-    project_objective: 85
+    work_cycle: 1
+    project: 5
+    objective: 4
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 63
   fields:
-    work_cycle: 2
-    project_objective: 85
+    work_cycle: 1
+    project: 5
+    objective: 10
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 64
   fields:
-    work_cycle: 2
-    project_objective: 10
+    work_cycle: 1
+    project: 5
+    objective: 6
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 65
   fields:
-    work_cycle: 2
-    project_objective: 10
+    work_cycle: 1
+    project: 5
+    objective: 8
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 66
   fields:
-    work_cycle: 2
-    project_objective: 10
+    work_cycle: 1
+    project: 5
+    objective: 9
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 67
   fields:
-    work_cycle: 2
-    project_objective: 8
+    work_cycle: 1
+    project: 4
+    objective: 7
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 68
   fields:
-    work_cycle: 2
-    project_objective: 8
+    work_cycle: 1
+    project: 4
+    objective: 1
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 69
   fields:
-    work_cycle: 2
-    project_objective: 8
+    work_cycle: 1
+    project: 4
+    objective: 2
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 70
   fields:
-    work_cycle: 2
-    project_objective: 6
+    work_cycle: 1
+    project: 4
+    objective: 11
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 71
   fields:
-    work_cycle: 2
-    project_objective: 6
+    work_cycle: 1
+    project: 4
+    objective: 5
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 72
   fields:
-    work_cycle: 2
-    project_objective: 6
+    work_cycle: 1
+    project: 4
+    objective: 3
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 73
   fields:
-    work_cycle: 2
-    project_objective: 12
+    work_cycle: 1
+    project: 4
+    objective: 4
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 74
   fields:
-    work_cycle: 2
-    project_objective: 12
+    work_cycle: 1
+    project: 4
+    objective: 10
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 75
   fields:
-    work_cycle: 2
-    project_objective: 12
+    work_cycle: 1
+    project: 4
+    objective: 6
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 76
   fields:
-    work_cycle: 2
-    project_objective: 16
+    work_cycle: 1
+    project: 4
+    objective: 8
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 77
   fields:
-    work_cycle: 2
-    project_objective: 16
-    committed: false
-    level: 2
-- model: projects.levelcommitment
-  pk: 78
-  fields:
-    work_cycle: 2
-    project_objective: 16
-    committed: false
-    level: 3
-- model: projects.levelcommitment
-  pk: 79
-  fields:
-    work_cycle: 2
-    project_objective: 14
+    work_cycle: 1
+    project: 4
+    objective: 9
     committed: false
     level: 1
 - model: projects.levelcommitment
+  pk: 78
+  fields:
+    work_cycle: 1
+    project: 2
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 79
+  fields:
+    work_cycle: 1
+    project: 2
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
   pk: 80
   fields:
-    work_cycle: 2
-    project_objective: 14
+    work_cycle: 1
+    project: 2
+    objective: 2
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 81
   fields:
-    work_cycle: 2
-    project_objective: 14
+    work_cycle: 1
+    project: 2
+    objective: 11
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 82
   fields:
-    work_cycle: 2
-    project_objective: 24
+    work_cycle: 1
+    project: 2
+    objective: 5
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 83
   fields:
-    work_cycle: 2
-    project_objective: 24
+    work_cycle: 1
+    project: 2
+    objective: 3
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 84
   fields:
-    work_cycle: 2
-    project_objective: 24
+    work_cycle: 1
+    project: 2
+    objective: 4
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 85
   fields:
-    work_cycle: 2
-    project_objective: 22
+    work_cycle: 1
+    project: 2
+    objective: 10
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 86
   fields:
-    work_cycle: 2
-    project_objective: 22
+    work_cycle: 1
+    project: 2
+    objective: 6
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 87
   fields:
-    work_cycle: 2
-    project_objective: 22
+    work_cycle: 1
+    project: 2
+    objective: 8
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 88
   fields:
-    work_cycle: 2
-    project_objective: 18
+    work_cycle: 1
+    project: 2
+    objective: 9
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 89
   fields:
-    work_cycle: 2
-    project_objective: 18
+    work_cycle: 1
+    project: 1
+    objective: 7
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 90
   fields:
-    work_cycle: 2
-    project_objective: 18
+    work_cycle: 1
+    project: 1
+    objective: 1
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 91
   fields:
-    work_cycle: 2
-    project_objective: 20
+    work_cycle: 1
+    project: 1
+    objective: 2
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 92
   fields:
-    work_cycle: 2
-    project_objective: 20
+    work_cycle: 1
+    project: 1
+    objective: 11
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 93
   fields:
-    work_cycle: 2
-    project_objective: 20
+    work_cycle: 1
+    project: 1
+    objective: 5
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 94
   fields:
-    work_cycle: 2
-    project_objective: 28
+    work_cycle: 1
+    project: 1
+    objective: 3
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 95
   fields:
-    work_cycle: 2
-    project_objective: 28
+    work_cycle: 1
+    project: 1
+    objective: 4
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 96
   fields:
-    work_cycle: 2
-    project_objective: 28
+    work_cycle: 1
+    project: 1
+    objective: 10
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 97
   fields:
-    work_cycle: 2
-    project_objective: 26
+    work_cycle: 1
+    project: 1
+    objective: 6
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 98
   fields:
-    work_cycle: 2
-    project_objective: 26
+    work_cycle: 1
+    project: 1
+    objective: 8
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 99
   fields:
-    work_cycle: 2
-    project_objective: 26
+    work_cycle: 1
+    project: 1
+    objective: 9
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 100
   fields:
-    work_cycle: 2
-    project_objective: 86
+    work_cycle: 1
+    project: 6
+    objective: 7
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 101
   fields:
-    work_cycle: 2
-    project_objective: 86
+    work_cycle: 1
+    project: 6
+    objective: 1
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 102
   fields:
-    work_cycle: 2
-    project_objective: 86
+    work_cycle: 1
+    project: 6
+    objective: 2
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 103
   fields:
-    work_cycle: 2
-    project_objective: 29
+    work_cycle: 1
+    project: 6
+    objective: 11
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 104
   fields:
-    work_cycle: 2
-    project_objective: 29
+    work_cycle: 1
+    project: 6
+    objective: 5
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 105
   fields:
-    work_cycle: 2
-    project_objective: 29
+    work_cycle: 1
+    project: 6
+    objective: 3
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 106
   fields:
-    work_cycle: 2
-    project_objective: 30
+    work_cycle: 1
+    project: 6
+    objective: 4
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 107
   fields:
-    work_cycle: 2
-    project_objective: 30
+    work_cycle: 1
+    project: 6
+    objective: 10
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 108
   fields:
-    work_cycle: 2
-    project_objective: 30
+    work_cycle: 1
+    project: 6
+    objective: 6
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 109
   fields:
-    work_cycle: 2
-    project_objective: 31
+    work_cycle: 1
+    project: 6
+    objective: 8
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 110
   fields:
-    work_cycle: 2
-    project_objective: 31
+    work_cycle: 1
+    project: 6
+    objective: 9
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 111
   fields:
-    work_cycle: 2
-    project_objective: 31
+    work_cycle: 1
+    project: 3
+    objective: 7
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 112
   fields:
-    work_cycle: 2
-    project_objective: 32
+    work_cycle: 1
+    project: 3
+    objective: 1
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 113
   fields:
-    work_cycle: 2
-    project_objective: 32
+    work_cycle: 1
+    project: 3
+    objective: 2
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 114
   fields:
-    work_cycle: 2
-    project_objective: 32
+    work_cycle: 1
+    project: 3
+    objective: 11
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 115
   fields:
-    work_cycle: 2
-    project_objective: 33
+    work_cycle: 1
+    project: 3
+    objective: 5
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 116
   fields:
-    work_cycle: 2
-    project_objective: 33
+    work_cycle: 1
+    project: 3
+    objective: 3
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 117
   fields:
-    work_cycle: 2
-    project_objective: 33
+    work_cycle: 1
+    project: 3
+    objective: 4
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 118
   fields:
-    work_cycle: 2
-    project_objective: 34
+    work_cycle: 1
+    project: 3
+    objective: 10
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 119
   fields:
-    work_cycle: 2
-    project_objective: 34
+    work_cycle: 1
+    project: 3
+    objective: 6
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 120
   fields:
-    work_cycle: 2
-    project_objective: 34
+    work_cycle: 1
+    project: 3
+    objective: 8
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 121
   fields:
-    work_cycle: 2
-    project_objective: 35
+    work_cycle: 1
+    project: 3
+    objective: 9
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 122
   fields:
-    work_cycle: 2
-    project_objective: 35
+    work_cycle: 1
+    project: 7
+    objective: 7
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 123
   fields:
-    work_cycle: 2
-    project_objective: 35
+    work_cycle: 1
+    project: 7
+    objective: 1
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 124
   fields:
-    work_cycle: 2
-    project_objective: 36
+    work_cycle: 1
+    project: 7
+    objective: 2
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 125
   fields:
-    work_cycle: 2
-    project_objective: 36
+    work_cycle: 1
+    project: 7
+    objective: 11
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 126
   fields:
-    work_cycle: 2
-    project_objective: 36
+    work_cycle: 1
+    project: 7
+    objective: 5
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 127
   fields:
-    work_cycle: 2
-    project_objective: 37
+    work_cycle: 1
+    project: 7
+    objective: 3
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 128
   fields:
-    work_cycle: 2
-    project_objective: 37
+    work_cycle: 1
+    project: 7
+    objective: 4
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 129
   fields:
-    work_cycle: 2
-    project_objective: 37
+    work_cycle: 1
+    project: 7
+    objective: 10
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 130
   fields:
-    work_cycle: 2
-    project_objective: 38
+    work_cycle: 1
+    project: 7
+    objective: 6
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 131
   fields:
-    work_cycle: 2
-    project_objective: 38
+    work_cycle: 1
+    project: 7
+    objective: 8
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 132
   fields:
-    work_cycle: 2
-    project_objective: 38
+    work_cycle: 1
+    project: 7
+    objective: 9
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 133
   fields:
-    work_cycle: 2
-    project_objective: 39
+    work_cycle: 1
+    project: 5
+    objective: 7
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 134
   fields:
-    work_cycle: 2
-    project_objective: 39
+    work_cycle: 1
+    project: 5
+    objective: 1
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 135
   fields:
-    work_cycle: 2
-    project_objective: 39
+    work_cycle: 1
+    project: 5
+    objective: 2
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 136
   fields:
-    work_cycle: 2
-    project_objective: 40
+    work_cycle: 1
+    project: 5
+    objective: 11
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 137
   fields:
-    work_cycle: 2
-    project_objective: 40
+    work_cycle: 1
+    project: 5
+    objective: 5
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 138
   fields:
-    work_cycle: 2
-    project_objective: 40
+    work_cycle: 1
+    project: 5
+    objective: 3
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 139
   fields:
-    work_cycle: 2
-    project_objective: 41
+    work_cycle: 1
+    project: 5
+    objective: 4
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 140
   fields:
-    work_cycle: 2
-    project_objective: 41
+    work_cycle: 1
+    project: 5
+    objective: 10
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 141
   fields:
-    work_cycle: 2
-    project_objective: 41
+    work_cycle: 1
+    project: 5
+    objective: 6
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 142
   fields:
-    work_cycle: 2
-    project_objective: 42
+    work_cycle: 1
+    project: 5
+    objective: 8
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 143
   fields:
-    work_cycle: 2
-    project_objective: 42
+    work_cycle: 1
+    project: 5
+    objective: 9
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 144
   fields:
-    work_cycle: 2
-    project_objective: 42
+    work_cycle: 1
+    project: 4
+    objective: 7
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 145
   fields:
-    work_cycle: 2
-    project_objective: 87
+    work_cycle: 1
+    project: 4
+    objective: 1
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 146
   fields:
-    work_cycle: 2
-    project_objective: 87
+    work_cycle: 1
+    project: 4
+    objective: 2
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 147
   fields:
-    work_cycle: 2
-    project_objective: 87
+    work_cycle: 1
+    project: 4
+    objective: 11
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 148
   fields:
-    work_cycle: 2
-    project_objective: 43
+    work_cycle: 1
+    project: 4
+    objective: 5
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 149
   fields:
-    work_cycle: 2
-    project_objective: 43
+    work_cycle: 1
+    project: 4
+    objective: 3
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 150
   fields:
-    work_cycle: 2
-    project_objective: 43
+    work_cycle: 1
+    project: 4
+    objective: 4
     committed: false
-    level: 3
+    level: 2
 - model: projects.levelcommitment
   pk: 151
   fields:
-    work_cycle: 2
-    project_objective: 44
+    work_cycle: 1
+    project: 4
+    objective: 10
     committed: false
-    level: 1
+    level: 2
 - model: projects.levelcommitment
   pk: 152
   fields:
-    work_cycle: 2
-    project_objective: 44
+    work_cycle: 1
+    project: 4
+    objective: 6
     committed: false
     level: 2
 - model: projects.levelcommitment
   pk: 153
   fields:
-    work_cycle: 2
-    project_objective: 44
-    committed: false
-    level: 3
-- model: projects.levelcommitment
-  pk: 154
-  fields:
-    work_cycle: 2
-    project_objective: 45
-    committed: false
-    level: 1
-- model: projects.levelcommitment
-  pk: 155
-  fields:
-    work_cycle: 2
-    project_objective: 45
+    work_cycle: 1
+    project: 4
+    objective: 8
     committed: false
     level: 2
 - model: projects.levelcommitment
+  pk: 154
+  fields:
+    work_cycle: 1
+    project: 4
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 155
+  fields:
+    work_cycle: 1
+    project: 2
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
   pk: 156
   fields:
-    work_cycle: 2
-    project_objective: 45
+    work_cycle: 1
+    project: 2
+    objective: 1
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 157
   fields:
-    work_cycle: 2
-    project_objective: 46
+    work_cycle: 1
+    project: 2
+    objective: 2
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 158
   fields:
-    work_cycle: 2
-    project_objective: 46
+    work_cycle: 1
+    project: 2
+    objective: 11
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 159
   fields:
-    work_cycle: 2
-    project_objective: 46
+    work_cycle: 1
+    project: 2
+    objective: 5
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 160
   fields:
-    work_cycle: 2
-    project_objective: 47
+    work_cycle: 1
+    project: 2
+    objective: 3
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 161
   fields:
-    work_cycle: 2
-    project_objective: 47
+    work_cycle: 1
+    project: 2
+    objective: 4
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 162
   fields:
-    work_cycle: 2
-    project_objective: 47
+    work_cycle: 1
+    project: 2
+    objective: 10
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 163
   fields:
-    work_cycle: 2
-    project_objective: 48
+    work_cycle: 1
+    project: 2
+    objective: 6
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 164
   fields:
-    work_cycle: 2
-    project_objective: 48
+    work_cycle: 1
+    project: 2
+    objective: 8
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 165
   fields:
-    work_cycle: 2
-    project_objective: 48
+    work_cycle: 1
+    project: 2
+    objective: 9
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 166
   fields:
-    work_cycle: 2
-    project_objective: 49
+    work_cycle: 1
+    project: 1
+    objective: 7
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 167
   fields:
-    work_cycle: 2
-    project_objective: 49
+    work_cycle: 1
+    project: 1
+    objective: 1
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 168
   fields:
-    work_cycle: 2
-    project_objective: 49
+    work_cycle: 1
+    project: 1
+    objective: 2
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 169
   fields:
-    work_cycle: 2
-    project_objective: 50
+    work_cycle: 1
+    project: 1
+    objective: 11
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 170
   fields:
-    work_cycle: 2
-    project_objective: 50
+    work_cycle: 1
+    project: 1
+    objective: 5
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 171
   fields:
-    work_cycle: 2
-    project_objective: 50
+    work_cycle: 1
+    project: 1
+    objective: 3
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 172
   fields:
-    work_cycle: 2
-    project_objective: 51
+    work_cycle: 1
+    project: 1
+    objective: 4
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 173
   fields:
-    work_cycle: 2
-    project_objective: 51
+    work_cycle: 1
+    project: 1
+    objective: 10
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 174
   fields:
-    work_cycle: 2
-    project_objective: 51
+    work_cycle: 1
+    project: 1
+    objective: 6
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 175
   fields:
-    work_cycle: 2
-    project_objective: 52
+    work_cycle: 1
+    project: 1
+    objective: 8
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 176
   fields:
-    work_cycle: 2
-    project_objective: 52
+    work_cycle: 1
+    project: 1
+    objective: 9
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 177
   fields:
-    work_cycle: 2
-    project_objective: 52
+    work_cycle: 1
+    project: 6
+    objective: 7
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 178
   fields:
-    work_cycle: 2
-    project_objective: 53
+    work_cycle: 1
+    project: 6
+    objective: 1
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 179
   fields:
-    work_cycle: 2
-    project_objective: 53
+    work_cycle: 1
+    project: 6
+    objective: 2
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 180
   fields:
-    work_cycle: 2
-    project_objective: 53
+    work_cycle: 1
+    project: 6
+    objective: 11
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 181
   fields:
-    work_cycle: 2
-    project_objective: 54
+    work_cycle: 1
+    project: 6
+    objective: 5
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 182
   fields:
-    work_cycle: 2
-    project_objective: 54
+    work_cycle: 1
+    project: 6
+    objective: 3
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 183
   fields:
-    work_cycle: 2
-    project_objective: 54
+    work_cycle: 1
+    project: 6
+    objective: 4
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 184
   fields:
-    work_cycle: 2
-    project_objective: 55
+    work_cycle: 1
+    project: 6
+    objective: 10
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 185
   fields:
-    work_cycle: 2
-    project_objective: 55
+    work_cycle: 1
+    project: 6
+    objective: 6
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 186
   fields:
-    work_cycle: 2
-    project_objective: 55
+    work_cycle: 1
+    project: 6
+    objective: 8
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 187
   fields:
-    work_cycle: 2
-    project_objective: 56
+    work_cycle: 1
+    project: 6
+    objective: 9
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 188
   fields:
-    work_cycle: 2
-    project_objective: 56
+    work_cycle: 1
+    project: 3
+    objective: 7
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 189
   fields:
-    work_cycle: 2
-    project_objective: 56
+    work_cycle: 1
+    project: 3
+    objective: 1
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 190
   fields:
-    work_cycle: 2
-    project_objective: 88
+    work_cycle: 1
+    project: 3
+    objective: 2
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 191
   fields:
-    work_cycle: 2
-    project_objective: 88
+    work_cycle: 1
+    project: 3
+    objective: 11
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 192
   fields:
-    work_cycle: 2
-    project_objective: 88
+    work_cycle: 1
+    project: 3
+    objective: 5
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 193
   fields:
-    work_cycle: 2
-    project_objective: 57
+    work_cycle: 1
+    project: 3
+    objective: 3
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 194
   fields:
-    work_cycle: 2
-    project_objective: 57
+    work_cycle: 1
+    project: 3
+    objective: 4
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 195
   fields:
-    work_cycle: 2
-    project_objective: 57
+    work_cycle: 1
+    project: 3
+    objective: 10
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 196
   fields:
-    work_cycle: 2
-    project_objective: 58
+    work_cycle: 1
+    project: 3
+    objective: 6
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 197
   fields:
-    work_cycle: 2
-    project_objective: 58
+    work_cycle: 1
+    project: 3
+    objective: 8
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 198
   fields:
-    work_cycle: 2
-    project_objective: 58
+    work_cycle: 1
+    project: 3
+    objective: 9
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 199
   fields:
-    work_cycle: 2
-    project_objective: 59
+    work_cycle: 1
+    project: 7
+    objective: 7
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 200
   fields:
-    work_cycle: 2
-    project_objective: 59
+    work_cycle: 1
+    project: 7
+    objective: 1
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 201
   fields:
-    work_cycle: 2
-    project_objective: 59
+    work_cycle: 1
+    project: 7
+    objective: 2
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 202
   fields:
-    work_cycle: 2
-    project_objective: 60
+    work_cycle: 1
+    project: 7
+    objective: 11
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 203
   fields:
-    work_cycle: 2
-    project_objective: 60
+    work_cycle: 1
+    project: 7
+    objective: 5
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 204
   fields:
-    work_cycle: 2
-    project_objective: 60
+    work_cycle: 1
+    project: 7
+    objective: 3
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 205
   fields:
-    work_cycle: 2
-    project_objective: 61
+    work_cycle: 1
+    project: 7
+    objective: 4
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 206
   fields:
-    work_cycle: 2
-    project_objective: 61
+    work_cycle: 1
+    project: 7
+    objective: 10
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 207
   fields:
-    work_cycle: 2
-    project_objective: 61
+    work_cycle: 1
+    project: 7
+    objective: 6
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 208
   fields:
-    work_cycle: 2
-    project_objective: 62
+    work_cycle: 1
+    project: 7
+    objective: 8
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 209
   fields:
-    work_cycle: 2
-    project_objective: 62
+    work_cycle: 1
+    project: 7
+    objective: 9
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 210
   fields:
-    work_cycle: 2
-    project_objective: 62
+    work_cycle: 1
+    project: 5
+    objective: 7
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 211
   fields:
-    work_cycle: 2
-    project_objective: 63
+    work_cycle: 1
+    project: 5
+    objective: 1
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 212
   fields:
-    work_cycle: 2
-    project_objective: 63
+    work_cycle: 1
+    project: 5
+    objective: 2
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 213
   fields:
-    work_cycle: 2
-    project_objective: 63
+    work_cycle: 1
+    project: 5
+    objective: 11
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 214
   fields:
-    work_cycle: 2
-    project_objective: 64
+    work_cycle: 1
+    project: 5
+    objective: 5
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 215
   fields:
-    work_cycle: 2
-    project_objective: 64
+    work_cycle: 1
+    project: 5
+    objective: 3
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 216
   fields:
-    work_cycle: 2
-    project_objective: 64
+    work_cycle: 1
+    project: 5
+    objective: 4
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 217
   fields:
-    work_cycle: 2
-    project_objective: 65
+    work_cycle: 1
+    project: 5
+    objective: 10
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 218
   fields:
-    work_cycle: 2
-    project_objective: 65
+    work_cycle: 1
+    project: 5
+    objective: 6
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 219
   fields:
-    work_cycle: 2
-    project_objective: 65
+    work_cycle: 1
+    project: 5
+    objective: 8
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 220
   fields:
-    work_cycle: 2
-    project_objective: 66
+    work_cycle: 1
+    project: 5
+    objective: 9
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 221
   fields:
-    work_cycle: 2
-    project_objective: 66
+    work_cycle: 1
+    project: 4
+    objective: 7
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 222
   fields:
-    work_cycle: 2
-    project_objective: 66
+    work_cycle: 1
+    project: 4
+    objective: 1
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 223
   fields:
-    work_cycle: 2
-    project_objective: 67
+    work_cycle: 1
+    project: 4
+    objective: 2
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 224
   fields:
-    work_cycle: 2
-    project_objective: 67
+    work_cycle: 1
+    project: 4
+    objective: 11
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 225
   fields:
-    work_cycle: 2
-    project_objective: 67
+    work_cycle: 1
+    project: 4
+    objective: 5
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 226
   fields:
-    work_cycle: 2
-    project_objective: 68
+    work_cycle: 1
+    project: 4
+    objective: 3
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 227
   fields:
-    work_cycle: 2
-    project_objective: 68
+    work_cycle: 1
+    project: 4
+    objective: 4
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 228
   fields:
-    work_cycle: 2
-    project_objective: 68
+    work_cycle: 1
+    project: 4
+    objective: 10
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 229
   fields:
-    work_cycle: 2
-    project_objective: 69
+    work_cycle: 1
+    project: 4
+    objective: 6
     committed: false
-    level: 1
+    level: 3
 - model: projects.levelcommitment
   pk: 230
   fields:
-    work_cycle: 2
-    project_objective: 69
+    work_cycle: 1
+    project: 4
+    objective: 8
     committed: false
-    level: 2
+    level: 3
 - model: projects.levelcommitment
   pk: 231
   fields:
-    work_cycle: 2
-    project_objective: 69
+    work_cycle: 1
+    project: 4
+    objective: 9
     committed: false
     level: 3
 - model: projects.levelcommitment
   pk: 232
   fields:
     work_cycle: 2
-    project_objective: 70
+    project: 2
+    objective: 7
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 233
   fields:
     work_cycle: 2
-    project_objective: 70
+    project: 2
+    objective: 1
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 234
   fields:
     work_cycle: 2
-    project_objective: 70
+    project: 2
+    objective: 2
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 235
   fields:
     work_cycle: 2
-    project_objective: 89
+    project: 2
+    objective: 11
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 236
   fields:
     work_cycle: 2
-    project_objective: 89
+    project: 2
+    objective: 5
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 237
   fields:
     work_cycle: 2
-    project_objective: 89
+    project: 2
+    objective: 3
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 238
   fields:
     work_cycle: 2
-    project_objective: 91
+    project: 2
+    objective: 4
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 239
   fields:
     work_cycle: 2
-    project_objective: 91
+    project: 2
+    objective: 10
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 240
   fields:
     work_cycle: 2
-    project_objective: 91
+    project: 2
+    objective: 6
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 241
   fields:
     work_cycle: 2
-    project_objective: 92
+    project: 2
+    objective: 8
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 242
   fields:
     work_cycle: 2
-    project_objective: 92
+    project: 2
+    objective: 9
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 243
   fields:
     work_cycle: 2
-    project_objective: 92
+    project: 1
+    objective: 7
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 244
   fields:
     work_cycle: 2
-    project_objective: 93
+    project: 1
+    objective: 1
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 245
   fields:
     work_cycle: 2
-    project_objective: 93
+    project: 1
+    objective: 2
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 246
   fields:
     work_cycle: 2
-    project_objective: 93
+    project: 1
+    objective: 11
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 247
   fields:
     work_cycle: 2
-    project_objective: 94
+    project: 1
+    objective: 5
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 248
   fields:
     work_cycle: 2
-    project_objective: 94
+    project: 1
+    objective: 3
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 249
   fields:
     work_cycle: 2
-    project_objective: 94
+    project: 1
+    objective: 4
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 250
   fields:
     work_cycle: 2
-    project_objective: 95
+    project: 1
+    objective: 10
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 251
   fields:
     work_cycle: 2
-    project_objective: 95
+    project: 1
+    objective: 6
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 252
   fields:
     work_cycle: 2
-    project_objective: 95
+    project: 1
+    objective: 8
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 253
   fields:
     work_cycle: 2
-    project_objective: 96
+    project: 1
+    objective: 9
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 254
   fields:
     work_cycle: 2
-    project_objective: 96
+    project: 6
+    objective: 7
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 255
   fields:
     work_cycle: 2
-    project_objective: 96
+    project: 6
+    objective: 1
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 256
   fields:
     work_cycle: 2
-    project_objective: 97
+    project: 6
+    objective: 2
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 257
   fields:
     work_cycle: 2
-    project_objective: 97
+    project: 6
+    objective: 11
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 258
   fields:
     work_cycle: 2
-    project_objective: 97
+    project: 6
+    objective: 5
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 259
   fields:
     work_cycle: 2
-    project_objective: 98
+    project: 6
+    objective: 3
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 260
   fields:
     work_cycle: 2
-    project_objective: 98
+    project: 6
+    objective: 4
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 261
   fields:
     work_cycle: 2
-    project_objective: 98
+    project: 6
+    objective: 10
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 262
   fields:
     work_cycle: 2
-    project_objective: 99
+    project: 6
+    objective: 6
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 263
   fields:
     work_cycle: 2
-    project_objective: 99
+    project: 6
+    objective: 8
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 264
   fields:
     work_cycle: 2
-    project_objective: 99
+    project: 6
+    objective: 9
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 265
   fields:
     work_cycle: 2
-    project_objective: 100
+    project: 3
+    objective: 7
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 266
   fields:
     work_cycle: 2
-    project_objective: 100
+    project: 3
+    objective: 1
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 267
   fields:
     work_cycle: 2
-    project_objective: 100
+    project: 3
+    objective: 2
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 268
   fields:
     work_cycle: 2
-    project_objective: 101
+    project: 3
+    objective: 11
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 269
   fields:
     work_cycle: 2
-    project_objective: 101
+    project: 3
+    objective: 5
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 270
   fields:
     work_cycle: 2
-    project_objective: 101
+    project: 3
+    objective: 3
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 271
   fields:
     work_cycle: 2
-    project_objective: 102
+    project: 3
+    objective: 4
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 272
   fields:
     work_cycle: 2
-    project_objective: 102
+    project: 3
+    objective: 10
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 273
   fields:
     work_cycle: 2
-    project_objective: 102
+    project: 3
+    objective: 6
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 274
   fields:
     work_cycle: 2
-    project_objective: 103
+    project: 3
+    objective: 8
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 275
   fields:
     work_cycle: 2
-    project_objective: 103
+    project: 3
+    objective: 9
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 276
   fields:
     work_cycle: 2
-    project_objective: 103
+    project: 7
+    objective: 7
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 277
   fields:
     work_cycle: 2
-    project_objective: 104
+    project: 7
+    objective: 1
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 278
   fields:
     work_cycle: 2
-    project_objective: 104
+    project: 7
+    objective: 2
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 279
   fields:
     work_cycle: 2
-    project_objective: 104
+    project: 7
+    objective: 11
     committed: false
-    level: 3
+    level: 1
 - model: projects.levelcommitment
   pk: 280
   fields:
     work_cycle: 2
-    project_objective: 105
+    project: 7
+    objective: 5
     committed: false
     level: 1
 - model: projects.levelcommitment
   pk: 281
   fields:
     work_cycle: 2
-    project_objective: 105
+    project: 7
+    objective: 3
     committed: false
-    level: 2
+    level: 1
 - model: projects.levelcommitment
   pk: 282
   fields:
     work_cycle: 2
-    project_objective: 105
+    project: 7
+    objective: 4
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 283
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 10
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 284
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 6
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 285
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 8
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 286
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 9
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 287
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 7
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 288
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 1
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 289
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 2
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 290
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 11
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 291
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 5
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 292
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 3
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 293
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 4
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 294
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 10
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 295
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 6
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 296
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 8
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 297
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 9
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 298
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 7
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 299
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 1
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 300
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 2
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 301
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 11
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 302
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 5
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 303
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 3
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 304
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 4
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 305
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 10
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 306
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 6
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 307
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 8
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 308
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 9
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 309
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 310
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 311
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 312
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 313
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 314
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 315
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 316
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 317
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 318
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 319
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 320
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 321
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 322
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 323
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 324
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 325
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 326
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 327
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 328
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 329
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 330
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 331
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 332
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 333
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 334
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 335
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 336
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 337
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 338
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 339
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 340
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 341
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 342
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 343
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 344
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 345
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 346
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 347
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 348
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 349
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 350
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 351
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 352
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 353
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 354
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 355
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 356
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 357
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 358
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 359
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 360
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 361
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 362
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 363
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 364
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 365
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 366
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 367
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 368
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 369
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 370
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 371
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 372
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 373
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 374
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 375
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 376
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 377
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 378
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 379
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 380
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 381
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 382
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 383
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 384
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 385
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 386
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 7
     committed: false
     level: 3
+- model: projects.levelcommitment
+  pk: 387
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 388
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 389
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 390
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 391
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 392
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 393
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 394
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 395
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 396
+  fields:
+    work_cycle: 2
+    project: 2
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 397
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 398
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 399
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 400
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 401
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 402
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 403
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 404
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 405
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 406
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 407
+  fields:
+    work_cycle: 2
+    project: 1
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 408
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 409
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 410
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 411
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 412
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 413
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 414
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 415
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 416
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 417
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 418
+  fields:
+    work_cycle: 2
+    project: 6
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 419
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 420
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 421
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 422
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 423
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 424
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 425
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 426
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 427
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 428
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 429
+  fields:
+    work_cycle: 2
+    project: 3
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 430
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 431
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 432
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 433
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 434
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 435
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 436
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 437
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 438
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 439
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 440
+  fields:
+    work_cycle: 2
+    project: 7
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 441
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 442
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 443
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 444
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 445
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 446
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 447
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 448
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 449
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 450
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 451
+  fields:
+    work_cycle: 2
+    project: 5
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 452
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 453
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 454
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 455
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 456
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 457
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 458
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 459
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 460
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 461
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 462
+  fields:
+    work_cycle: 2
+    project: 4
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.qi
+  pk: 1
+  fields:
+    project: 2
+    workcycle: 1
+    value: 0
+- model: projects.qi
+  pk: 2
+  fields:
+    project: 1
+    workcycle: 1
+    value: 0
+- model: projects.qi
+  pk: 3
+  fields:
+    project: 6
+    workcycle: 1
+    value: 0
+- model: projects.qi
+  pk: 4
+  fields:
+    project: 3
+    workcycle: 1
+    value: 0
+- model: projects.qi
+  pk: 5
+  fields:
+    project: 7
+    workcycle: 1
+    value: 0
+- model: projects.qi
+  pk: 6
+  fields:
+    project: 5
+    workcycle: 1
+    value: 0
+- model: projects.qi
+  pk: 7
+  fields:
+    project: 4
+    workcycle: 1
+    value: 0
+- model: projects.qi
+  pk: 8
+  fields:
+    project: 2
+    workcycle: 2
+    value: 0
+- model: projects.qi
+  pk: 9
+  fields:
+    project: 1
+    workcycle: 2
+    value: 0
+- model: projects.qi
+  pk: 10
+  fields:
+    project: 6
+    workcycle: 2
+    value: 0
+- model: projects.qi
+  pk: 11
+  fields:
+    project: 3
+    workcycle: 2
+    value: 0
+- model: projects.qi
+  pk: 12
+  fields:
+    project: 7
+    workcycle: 2
+    value: 0
+- model: projects.qi
+  pk: 13
+  fields:
+    project: 5
+    workcycle: 2
+    value: 0
+- model: projects.qi
+  pk: 14
+  fields:
+    project: 4
+    workcycle: 2
+    value: 0
 - model: projects.projectgroup
   pk: 1
   fields:
-    name: Juju and Charms
+    name: Science
 - model: projects.projectgroup
   pk: 2
   fields:
-    name: Streaming
+    name: Music
 - model: projects.projectgroup
   pk: 3
   fields:
-    name: OpenStack
+    name: Technology
 - model: projects.projectgroup
   pk: 4
   fields:
-    name: Commercial systems
-- model: projects.projectgroup
-  pk: 5
-  fields:
-    name: Other
+    name: Travel
 - model: projects.project
   pk: 1
   fields:
-    name: Juju
+    name: Nuclear
     group: 1
-    owner: A. Director
-    driver: A.N. Author
-    last_review: 2024-10-04
-    last_review_status: 5
+    owner: A. Scientist
+    driver: A. Technician
+    last_review: 2024-12-16
+    last_review_status: 1
 - model: projects.project
   pk: 2
   fields:
-    name: JAAS
+    name: Chemistry
     group: 1
-    owner: A. Manager
-    driver: A.N. Author
-    last_review: 2025-01-14
+    owner: A. Chemist
+    driver: null
+    last_review: 2025-02-02
     last_review_status: 1
 - model: projects.project
   pk: 3
   fields:
-    name: Pebble
-    group: 1
-    owner: A. Colleague
-    driver: null
-    last_review: 2024-10-14
-    last_review_status: null
+    name: Early modern
+    group: 2
+    owner: A. Researcher
+    driver: Some Musician
+    last_review: 2023-08-16
+    last_review_status: 2
 - model: projects.project
   pk: 4
   fields:
-    name: MicroStack
-    group: 3
-    owner: Someone
-    driver: A. Developer
-    last_review: 2024-10-11
+    name: Deserts and oceans
+    group: 4
+    owner: A.N. Explorer
+    driver: A. Traveller
+    last_review: 2025-02-02
     last_review_status: 4
 - model: projects.project
   pk: 5
   fields:
-    name: Livepatch
+    name: Buses
     group: 4
-    owner: Responsible Person
-    driver: null
-    last_review: 2024-10-16
+    owner: Some Company
+    driver: Bus Driver
+    last_review: null
     last_review_status: 3
+- model: projects.project
+  pk: 6
+  fields:
+    name: Sea creatures
+    group: 1
+    owner: A.N. Ocean
+    driver: null
+    last_review: 2024-12-26
+    last_review_status: 5
 - model: projects.project
   pk: 7
   fields:
-    name: Starter Pack
-    group: 5
-    owner: Me
-    driver: null
-    last_review: null
-    last_review_status: 3
+    name: Food packaging
+    group: 3
+    owner: A. Chemist
+    driver: Some Packager
+    last_review: 2025-02-02
+    last_review_status: 1
 - model: projects.projectobjective
   pk: 1
   fields:
     project: 1
     objective: 1
-    if_not_started: PL
+    if_not_started: null
 - model: projects.projectobjective
   pk: 2
   fields:
@@ -2263,752 +4254,2418 @@
 - model: projects.projectobjective
   pk: 3
   fields:
-    project: 1
-    objective: 2
+    project: 3
+    objective: 1
     if_not_started: null
 - model: projects.projectobjective
   pk: 4
   fields:
-    project: 2
-    objective: 2
-    if_not_started: DE
+    project: 4
+    objective: 1
+    if_not_started: null
 - model: projects.projectobjective
   pk: 5
   fields:
     project: 2
-    objective: 3
-    if_not_started: null
+    objective: 2
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 6
   fields:
     project: 1
-    objective: 3
+    objective: 2
     if_not_started: null
 - model: projects.projectobjective
   pk: 7
   fields:
-    project: 2
-    objective: 4
-    if_not_started: null
+    project: 3
+    objective: 2
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 8
   fields:
-    project: 1
-    objective: 4
+    project: 4
+    objective: 2
     if_not_started: null
 - model: projects.projectobjective
   pk: 9
   fields:
     project: 2
-    objective: 5
-    if_not_started: null
+    objective: 3
+    if_not_started: BL
 - model: projects.projectobjective
   pk: 10
   fields:
     project: 1
-    objective: 5
+    objective: 3
     if_not_started: null
 - model: projects.projectobjective
   pk: 11
   fields:
-    project: 2
-    objective: 6
-    if_not_started: null
+    project: 3
+    objective: 3
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 12
   fields:
-    project: 1
-    objective: 6
-    if_not_started: DE
+    project: 4
+    objective: 3
+    if_not_started: null
 - model: projects.projectobjective
   pk: 13
   fields:
     project: 2
-    objective: 7
+    objective: 4
     if_not_started: null
 - model: projects.projectobjective
   pk: 14
   fields:
     project: 1
-    objective: 7
+    objective: 4
     if_not_started: null
 - model: projects.projectobjective
   pk: 15
   fields:
-    project: 2
-    objective: 8
-    if_not_started: null
+    project: 3
+    objective: 4
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 16
   fields:
-    project: 1
-    objective: 8
+    project: 4
+    objective: 4
     if_not_started: null
 - model: projects.projectobjective
   pk: 17
   fields:
     project: 2
-    objective: 9
+    objective: 5
     if_not_started: null
 - model: projects.projectobjective
   pk: 18
   fields:
     project: 1
-    objective: 9
+    objective: 5
     if_not_started: null
 - model: projects.projectobjective
   pk: 19
   fields:
-    project: 2
-    objective: 10
-    if_not_started: null
+    project: 3
+    objective: 5
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 20
   fields:
-    project: 1
-    objective: 10
+    project: 4
+    objective: 5
     if_not_started: null
 - model: projects.projectobjective
   pk: 21
   fields:
     project: 2
-    objective: 11
+    objective: 6
     if_not_started: null
 - model: projects.projectobjective
   pk: 22
   fields:
     project: 1
-    objective: 11
-    if_not_started: null
+    objective: 6
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 23
   fields:
-    project: 2
-    objective: 12
-    if_not_started: null
+    project: 3
+    objective: 6
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 24
   fields:
-    project: 1
-    objective: 12
+    project: 4
+    objective: 6
     if_not_started: null
 - model: projects.projectobjective
   pk: 25
   fields:
     project: 2
-    objective: 13
-    if_not_started: null
+    objective: 7
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 26
   fields:
     project: 1
-    objective: 13
+    objective: 7
     if_not_started: null
 - model: projects.projectobjective
   pk: 27
-  fields:
-    project: 2
-    objective: 14
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 28
-  fields:
-    project: 1
-    objective: 14
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 29
-  fields:
-    project: 3
-    objective: 5
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 30
-  fields:
-    project: 3
-    objective: 4
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 31
-  fields:
-    project: 3
-    objective: 3
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 32
-  fields:
-    project: 3
-    objective: 1
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 33
-  fields:
-    project: 3
-    objective: 2
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 34
-  fields:
-    project: 3
-    objective: 6
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 35
-  fields:
-    project: 3
-    objective: 8
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 36
   fields:
     project: 3
     objective: 7
     if_not_started: null
 - model: projects.projectobjective
-  pk: 37
+  pk: 28
+  fields:
+    project: 4
+    objective: 7
+    if_not_started: BL
+- model: projects.projectobjective
+  pk: 29
+  fields:
+    project: 2
+    objective: 8
+    if_not_started: null
+- model: projects.projectobjective
+  pk: 30
+  fields:
+    project: 1
+    objective: 8
+    if_not_started: null
+- model: projects.projectobjective
+  pk: 31
   fields:
     project: 3
-    objective: 12
+    objective: 8
     if_not_started: null
+- model: projects.projectobjective
+  pk: 32
+  fields:
+    project: 4
+    objective: 8
+    if_not_started: null
+- model: projects.projectobjective
+  pk: 33
+  fields:
+    project: 2
+    objective: 9
+    if_not_started: null
+- model: projects.projectobjective
+  pk: 34
+  fields:
+    project: 1
+    objective: 9
+    if_not_started: null
+- model: projects.projectobjective
+  pk: 35
+  fields:
+    project: 3
+    objective: 9
+    if_not_started: null
+- model: projects.projectobjective
+  pk: 36
+  fields:
+    project: 4
+    objective: 9
+    if_not_started: null
+- model: projects.projectobjective
+  pk: 37
+  fields:
+    project: 2
+    objective: 10
+    if_not_started: BL
 - model: projects.projectobjective
   pk: 38
   fields:
-    project: 3
-    objective: 11
+    project: 1
+    objective: 10
     if_not_started: null
 - model: projects.projectobjective
   pk: 39
   fields:
     project: 3
-    objective: 9
+    objective: 10
     if_not_started: null
 - model: projects.projectobjective
   pk: 40
   fields:
-    project: 3
+    project: 4
     objective: 10
     if_not_started: null
 - model: projects.projectobjective
   pk: 41
   fields:
-    project: 3
-    objective: 14
-    if_not_started: null
+    project: 2
+    objective: 11
+    if_not_started: DE
 - model: projects.projectobjective
   pk: 42
   fields:
-    project: 3
-    objective: 13
+    project: 1
+    objective: 11
     if_not_started: null
 - model: projects.projectobjective
   pk: 43
   fields:
-    project: 4
-    objective: 5
+    project: 3
+    objective: 11
     if_not_started: null
 - model: projects.projectobjective
   pk: 44
   fields:
     project: 4
-    objective: 4
+    objective: 11
     if_not_started: null
 - model: projects.projectobjective
   pk: 45
   fields:
-    project: 4
-    objective: 3
+    project: 5
+    objective: 7
     if_not_started: null
 - model: projects.projectobjective
   pk: 46
   fields:
-    project: 4
+    project: 5
     objective: 1
-    if_not_started: null
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 47
   fields:
-    project: 4
+    project: 5
     objective: 2
     if_not_started: null
 - model: projects.projectobjective
   pk: 48
   fields:
-    project: 4
-    objective: 6
+    project: 5
+    objective: 11
     if_not_started: null
 - model: projects.projectobjective
   pk: 49
   fields:
-    project: 4
-    objective: 8
-    if_not_started: null
+    project: 5
+    objective: 5
+    if_not_started: IN
 - model: projects.projectobjective
   pk: 50
   fields:
-    project: 4
-    objective: 7
+    project: 5
+    objective: 3
     if_not_started: null
 - model: projects.projectobjective
   pk: 51
   fields:
-    project: 4
-    objective: 12
+    project: 5
+    objective: 4
     if_not_started: null
 - model: projects.projectobjective
   pk: 52
   fields:
-    project: 4
-    objective: 11
+    project: 5
+    objective: 10
     if_not_started: null
 - model: projects.projectobjective
   pk: 53
   fields:
-    project: 4
-    objective: 9
+    project: 5
+    objective: 6
     if_not_started: null
 - model: projects.projectobjective
   pk: 54
   fields:
-    project: 4
-    objective: 10
+    project: 5
+    objective: 8
     if_not_started: null
 - model: projects.projectobjective
   pk: 55
   fields:
-    project: 4
-    objective: 14
+    project: 5
+    objective: 9
     if_not_started: null
 - model: projects.projectobjective
   pk: 56
   fields:
-    project: 4
-    objective: 13
+    project: 6
+    objective: 7
     if_not_started: null
 - model: projects.projectobjective
   pk: 57
   fields:
-    project: 5
-    objective: 5
+    project: 6
+    objective: 1
     if_not_started: null
 - model: projects.projectobjective
   pk: 58
   fields:
-    project: 5
-    objective: 4
-    if_not_started: null
+    project: 6
+    objective: 2
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 59
   fields:
-    project: 5
-    objective: 3
+    project: 6
+    objective: 11
     if_not_started: null
 - model: projects.projectobjective
   pk: 60
   fields:
-    project: 5
-    objective: 1
+    project: 6
+    objective: 5
     if_not_started: null
 - model: projects.projectobjective
   pk: 61
   fields:
-    project: 5
-    objective: 2
+    project: 6
+    objective: 3
     if_not_started: null
 - model: projects.projectobjective
   pk: 62
   fields:
-    project: 5
-    objective: 6
+    project: 6
+    objective: 4
     if_not_started: null
 - model: projects.projectobjective
   pk: 63
   fields:
-    project: 5
-    objective: 8
+    project: 6
+    objective: 10
     if_not_started: null
 - model: projects.projectobjective
   pk: 64
   fields:
-    project: 5
-    objective: 7
+    project: 6
+    objective: 6
     if_not_started: null
 - model: projects.projectobjective
   pk: 65
   fields:
-    project: 5
-    objective: 12
+    project: 6
+    objective: 8
     if_not_started: null
 - model: projects.projectobjective
   pk: 66
   fields:
-    project: 5
-    objective: 11
+    project: 6
+    objective: 9
     if_not_started: null
 - model: projects.projectobjective
   pk: 67
   fields:
-    project: 5
-    objective: 9
+    project: 7
+    objective: 7
     if_not_started: null
 - model: projects.projectobjective
   pk: 68
   fields:
-    project: 5
-    objective: 10
+    project: 7
+    objective: 1
     if_not_started: null
 - model: projects.projectobjective
   pk: 69
   fields:
-    project: 5
-    objective: 14
-    if_not_started: null
+    project: 7
+    objective: 2
+    if_not_started: PL
 - model: projects.projectobjective
   pk: 70
   fields:
-    project: 5
-    objective: 13
+    project: 7
+    objective: 11
     if_not_started: null
 - model: projects.projectobjective
-  pk: 85
-  fields:
-    project: 2
-    objective: 15
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 86
-  fields:
-    project: 1
-    objective: 15
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 87
-  fields:
-    project: 3
-    objective: 15
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 88
-  fields:
-    project: 4
-    objective: 15
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 89
-  fields:
-    project: 5
-    objective: 15
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 91
+  pk: 71
   fields:
     project: 7
     objective: 5
-    if_not_started: null
+    if_not_started: BL
 - model: projects.projectobjective
-  pk: 92
-  fields:
-    project: 7
-    objective: 4
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 93
+  pk: 72
   fields:
     project: 7
     objective: 3
     if_not_started: null
 - model: projects.projectobjective
-  pk: 94
+  pk: 73
   fields:
     project: 7
-    objective: 1
+    objective: 4
     if_not_started: null
 - model: projects.projectobjective
-  pk: 95
-  fields:
-    project: 7
-    objective: 2
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 96
-  fields:
-    project: 7
-    objective: 6
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 97
-  fields:
-    project: 7
-    objective: 8
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 98
-  fields:
-    project: 7
-    objective: 7
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 99
-  fields:
-    project: 7
-    objective: 12
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 100
-  fields:
-    project: 7
-    objective: 11
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 101
-  fields:
-    project: 7
-    objective: 9
-    if_not_started: null
-- model: projects.projectobjective
-  pk: 102
+  pk: 74
   fields:
     project: 7
     objective: 10
     if_not_started: null
 - model: projects.projectobjective
-  pk: 103
+  pk: 75
   fields:
     project: 7
-    objective: 14
+    objective: 6
     if_not_started: null
 - model: projects.projectobjective
-  pk: 104
+  pk: 76
   fields:
     project: 7
-    objective: 13
+    objective: 8
     if_not_started: null
 - model: projects.projectobjective
-  pk: 105
+  pk: 77
   fields:
     project: 7
-    objective: 15
+    objective: 9
     if_not_started: null
 - model: projects.projectobjectivecondition
   pk: 1
   fields:
-    projectobjective: 1
+    project: 1
+    objective: 1
     condition: 1
-    done: false
+    done: true
 - model: projects.projectobjectivecondition
   pk: 2
   fields:
-    projectobjective: 2
+    project: 2
+    objective: 1
     condition: 1
     done: true
 - model: projects.projectobjectivecondition
   pk: 3
   fields:
-    projectobjective: 1
-    condition: 3
+    project: 3
+    objective: 1
+    condition: 1
     done: false
 - model: projects.projectobjectivecondition
   pk: 4
   fields:
-    projectobjective: 2
-    condition: 3
+    project: 4
+    objective: 1
+    condition: 1
     done: false
 - model: projects.projectobjectivecondition
   pk: 5
   fields:
-    projectobjective: 1
+    project: 2
+    objective: 1
     condition: 2
-    done: false
+    done: true
 - model: projects.projectobjectivecondition
   pk: 6
   fields:
-    projectobjective: 2
+    project: 1
+    objective: 1
     condition: 2
-    done: false
+    done: true
 - model: projects.projectobjectivecondition
   pk: 7
   fields:
-    projectobjective: 3
-    condition: 4
+    project: 3
+    objective: 1
+    condition: 2
     done: false
 - model: projects.projectobjectivecondition
   pk: 8
   fields:
-    projectobjective: 4
-    condition: 4
-    done: false
+    project: 4
+    objective: 1
+    condition: 2
+    done: true
 - model: projects.projectobjectivecondition
   pk: 9
   fields:
-    projectobjective: 3
-    condition: 5
-    done: false
+    project: 2
+    objective: 1
+    condition: 3
+    done: true
 - model: projects.projectobjectivecondition
   pk: 10
   fields:
-    projectobjective: 4
-    condition: 5
+    project: 1
+    objective: 1
+    condition: 3
     done: false
 - model: projects.projectobjectivecondition
   pk: 11
   fields:
-    projectobjective: 3
-    condition: 6
-    done: true
+    project: 3
+    objective: 1
+    condition: 3
+    done: false
 - model: projects.projectobjectivecondition
   pk: 12
   fields:
-    projectobjective: 4
-    condition: 6
-    done: false
+    project: 4
+    objective: 1
+    condition: 3
+    done: true
 - model: projects.projectobjectivecondition
   pk: 13
   fields:
-    projectobjective: 32
-    condition: 3
+    project: 2
+    objective: 1
+    condition: 4
     done: false
 - model: projects.projectobjectivecondition
   pk: 14
   fields:
-    projectobjective: 46
-    condition: 3
+    project: 1
+    objective: 1
+    condition: 4
     done: false
 - model: projects.projectobjectivecondition
   pk: 15
   fields:
-    projectobjective: 60
-    condition: 3
-    done: true
+    project: 3
+    objective: 1
+    condition: 4
+    done: false
 - model: projects.projectobjectivecondition
   pk: 16
   fields:
-    projectobjective: 9
-    condition: 7
-    done: true
+    project: 4
+    objective: 1
+    condition: 4
+    done: false
 - model: projects.projectobjectivecondition
   pk: 17
   fields:
-    projectobjective: 10
-    condition: 7
+    project: 2
+    objective: 1
+    condition: 5
     done: false
 - model: projects.projectobjectivecondition
   pk: 18
   fields:
-    projectobjective: 29
-    condition: 7
+    project: 1
+    objective: 1
+    condition: 5
     done: false
 - model: projects.projectobjectivecondition
   pk: 19
   fields:
-    projectobjective: 43
-    condition: 7
+    project: 3
+    objective: 1
+    condition: 5
     done: false
 - model: projects.projectobjectivecondition
   pk: 20
   fields:
-    projectobjective: 57
-    condition: 7
-    done: true
+    project: 4
+    objective: 1
+    condition: 5
+    done: false
 - model: projects.projectobjectivecondition
   pk: 21
   fields:
-    projectobjective: 33
-    condition: 4
-    done: true
+    project: 2
+    objective: 1
+    condition: 6
+    done: false
 - model: projects.projectobjectivecondition
   pk: 22
   fields:
-    projectobjective: 47
-    condition: 4
+    project: 1
+    objective: 1
+    condition: 6
     done: false
 - model: projects.projectobjectivecondition
   pk: 23
   fields:
-    projectobjective: 61
-    condition: 4
+    project: 3
+    objective: 1
+    condition: 6
     done: false
 - model: projects.projectobjectivecondition
   pk: 24
   fields:
-    projectobjective: 85
-    condition: 8
-    done: false
+    project: 4
+    objective: 1
+    condition: 6
+    done: true
 - model: projects.projectobjectivecondition
   pk: 25
   fields:
-    projectobjective: 86
-    condition: 8
+    project: 2
+    objective: 2
+    condition: 7
     done: false
 - model: projects.projectobjectivecondition
   pk: 26
   fields:
-    projectobjective: 87
-    condition: 8
-    done: false
+    project: 1
+    objective: 2
+    condition: 7
+    done: true
 - model: projects.projectobjectivecondition
   pk: 27
   fields:
-    projectobjective: 88
-    condition: 8
+    project: 3
+    objective: 2
+    condition: 7
     done: false
 - model: projects.projectobjectivecondition
   pk: 28
   fields:
-    projectobjective: 89
-    condition: 8
+    project: 4
+    objective: 2
+    condition: 7
     done: false
+- model: projects.projectobjectivecondition
+  pk: 29
+  fields:
+    project: 2
+    objective: 2
+    condition: 8
+    done: true
 - model: projects.projectobjectivecondition
   pk: 30
   fields:
-    projectobjective: 91
-    condition: 7
+    project: 1
+    objective: 2
+    condition: 8
     done: false
 - model: projects.projectobjectivecondition
   pk: 31
   fields:
-    projectobjective: 94
-    condition: 1
+    project: 3
+    objective: 2
+    condition: 8
     done: false
 - model: projects.projectobjectivecondition
   pk: 32
   fields:
-    projectobjective: 94
-    condition: 2
+    project: 4
+    objective: 2
+    condition: 8
     done: false
 - model: projects.projectobjectivecondition
   pk: 33
   fields:
-    projectobjective: 94
-    condition: 3
+    project: 2
+    objective: 2
+    condition: 9
     done: false
 - model: projects.projectobjectivecondition
   pk: 34
   fields:
-    projectobjective: 95
-    condition: 4
+    project: 1
+    objective: 2
+    condition: 9
     done: false
 - model: projects.projectobjectivecondition
   pk: 35
   fields:
-    projectobjective: 95
-    condition: 5
+    project: 3
+    objective: 2
+    condition: 9
     done: false
 - model: projects.projectobjectivecondition
   pk: 36
   fields:
-    projectobjective: 95
-    condition: 6
-    done: false
+    project: 4
+    objective: 2
+    condition: 9
+    done: true
 - model: projects.projectobjectivecondition
   pk: 37
   fields:
-    projectobjective: 105
+    project: 2
+    objective: 2
+    condition: 10
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 38
+  fields:
+    project: 1
+    objective: 2
+    condition: 10
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 39
+  fields:
+    project: 3
+    objective: 2
+    condition: 10
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 40
+  fields:
+    project: 4
+    objective: 2
+    condition: 10
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 41
+  fields:
+    project: 2
+    objective: 3
+    condition: 11
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 42
+  fields:
+    project: 1
+    objective: 3
+    condition: 11
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 43
+  fields:
+    project: 3
+    objective: 3
+    condition: 11
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 44
+  fields:
+    project: 4
+    objective: 3
+    condition: 11
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 45
+  fields:
+    project: 2
+    objective: 3
+    condition: 12
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 46
+  fields:
+    project: 1
+    objective: 3
+    condition: 12
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 47
+  fields:
+    project: 3
+    objective: 3
+    condition: 12
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 48
+  fields:
+    project: 4
+    objective: 3
+    condition: 12
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 49
+  fields:
+    project: 2
+    objective: 3
+    condition: 13
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 50
+  fields:
+    project: 1
+    objective: 3
+    condition: 13
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 51
+  fields:
+    project: 3
+    objective: 3
+    condition: 13
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 52
+  fields:
+    project: 4
+    objective: 3
+    condition: 13
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 53
+  fields:
+    project: 2
+    objective: 3
+    condition: 14
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 54
+  fields:
+    project: 1
+    objective: 3
+    condition: 14
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 55
+  fields:
+    project: 3
+    objective: 3
+    condition: 14
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 56
+  fields:
+    project: 4
+    objective: 3
+    condition: 14
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 57
+  fields:
+    project: 2
+    objective: 4
+    condition: 15
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 58
+  fields:
+    project: 1
+    objective: 4
+    condition: 15
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 59
+  fields:
+    project: 3
+    objective: 4
+    condition: 15
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 60
+  fields:
+    project: 4
+    objective: 4
+    condition: 15
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 61
+  fields:
+    project: 2
+    objective: 4
+    condition: 16
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 62
+  fields:
+    project: 1
+    objective: 4
+    condition: 16
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 63
+  fields:
+    project: 3
+    objective: 4
+    condition: 16
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 64
+  fields:
+    project: 4
+    objective: 4
+    condition: 16
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 65
+  fields:
+    project: 2
+    objective: 4
+    condition: 17
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 66
+  fields:
+    project: 1
+    objective: 4
+    condition: 17
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 67
+  fields:
+    project: 3
+    objective: 4
+    condition: 17
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 68
+  fields:
+    project: 4
+    objective: 4
+    condition: 17
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 69
+  fields:
+    project: 2
+    objective: 5
+    condition: 18
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 70
+  fields:
+    project: 1
+    objective: 5
+    condition: 18
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 71
+  fields:
+    project: 3
+    objective: 5
+    condition: 18
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 72
+  fields:
+    project: 4
+    objective: 5
+    condition: 18
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 73
+  fields:
+    project: 2
+    objective: 5
+    condition: 19
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 74
+  fields:
+    project: 1
+    objective: 5
+    condition: 19
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 75
+  fields:
+    project: 3
+    objective: 5
+    condition: 19
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 76
+  fields:
+    project: 4
+    objective: 5
+    condition: 19
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 77
+  fields:
+    project: 2
+    objective: 5
+    condition: 20
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 78
+  fields:
+    project: 1
+    objective: 5
+    condition: 20
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 79
+  fields:
+    project: 3
+    objective: 5
+    condition: 20
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 80
+  fields:
+    project: 4
+    objective: 5
+    condition: 20
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 81
+  fields:
+    project: 2
+    objective: 6
+    condition: 21
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 82
+  fields:
+    project: 1
+    objective: 6
+    condition: 21
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 83
+  fields:
+    project: 3
+    objective: 6
+    condition: 21
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 84
+  fields:
+    project: 4
+    objective: 6
+    condition: 21
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 85
+  fields:
+    project: 2
+    objective: 6
+    condition: 22
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 86
+  fields:
+    project: 1
+    objective: 6
+    condition: 22
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 87
+  fields:
+    project: 3
+    objective: 6
+    condition: 22
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 88
+  fields:
+    project: 4
+    objective: 6
+    condition: 22
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 89
+  fields:
+    project: 2
+    objective: 6
+    condition: 23
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 90
+  fields:
+    project: 1
+    objective: 6
+    condition: 23
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 91
+  fields:
+    project: 3
+    objective: 6
+    condition: 23
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 92
+  fields:
+    project: 4
+    objective: 6
+    condition: 23
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 93
+  fields:
+    project: 2
+    objective: 7
+    condition: 24
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 94
+  fields:
+    project: 1
+    objective: 7
+    condition: 24
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 95
+  fields:
+    project: 3
+    objective: 7
+    condition: 24
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 96
+  fields:
+    project: 4
+    objective: 7
+    condition: 24
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 97
+  fields:
+    project: 2
+    objective: 7
+    condition: 25
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 98
+  fields:
+    project: 1
+    objective: 7
+    condition: 25
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 99
+  fields:
+    project: 3
+    objective: 7
+    condition: 25
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 100
+  fields:
+    project: 4
+    objective: 7
+    condition: 25
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 101
+  fields:
+    project: 2
+    objective: 7
+    condition: 26
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 102
+  fields:
+    project: 1
+    objective: 7
+    condition: 26
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 103
+  fields:
+    project: 3
+    objective: 7
+    condition: 26
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 104
+  fields:
+    project: 4
+    objective: 7
+    condition: 26
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 105
+  fields:
+    project: 2
+    objective: 8
+    condition: 27
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 106
+  fields:
+    project: 1
+    objective: 8
+    condition: 27
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 107
+  fields:
+    project: 3
+    objective: 8
+    condition: 27
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 108
+  fields:
+    project: 4
+    objective: 8
+    condition: 27
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 109
+  fields:
+    project: 2
+    objective: 8
+    condition: 28
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 110
+  fields:
+    project: 1
+    objective: 8
+    condition: 28
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 111
+  fields:
+    project: 3
+    objective: 8
+    condition: 28
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 112
+  fields:
+    project: 4
+    objective: 8
+    condition: 28
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 113
+  fields:
+    project: 2
+    objective: 8
+    condition: 29
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 114
+  fields:
+    project: 1
+    objective: 8
+    condition: 29
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 115
+  fields:
+    project: 3
+    objective: 8
+    condition: 29
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 116
+  fields:
+    project: 4
+    objective: 8
+    condition: 29
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 117
+  fields:
+    project: 2
+    objective: 8
+    condition: 30
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 118
+  fields:
+    project: 1
+    objective: 8
+    condition: 30
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 119
+  fields:
+    project: 3
+    objective: 8
+    condition: 30
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 120
+  fields:
+    project: 4
+    objective: 8
+    condition: 30
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 121
+  fields:
+    project: 2
+    objective: 9
+    condition: 31
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 122
+  fields:
+    project: 1
+    objective: 9
+    condition: 31
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 123
+  fields:
+    project: 3
+    objective: 9
+    condition: 31
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 124
+  fields:
+    project: 4
+    objective: 9
+    condition: 31
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 125
+  fields:
+    project: 2
+    objective: 9
+    condition: 32
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 126
+  fields:
+    project: 1
+    objective: 9
+    condition: 32
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 127
+  fields:
+    project: 3
+    objective: 9
+    condition: 32
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 128
+  fields:
+    project: 4
+    objective: 9
+    condition: 32
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 129
+  fields:
+    project: 2
+    objective: 9
+    condition: 33
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 130
+  fields:
+    project: 1
+    objective: 9
+    condition: 33
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 131
+  fields:
+    project: 3
+    objective: 9
+    condition: 33
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 132
+  fields:
+    project: 4
+    objective: 9
+    condition: 33
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 133
+  fields:
+    project: 2
+    objective: 10
+    condition: 34
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 134
+  fields:
+    project: 1
+    objective: 10
+    condition: 34
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 135
+  fields:
+    project: 3
+    objective: 10
+    condition: 34
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 136
+  fields:
+    project: 4
+    objective: 10
+    condition: 34
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 137
+  fields:
+    project: 2
+    objective: 10
+    condition: 35
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 138
+  fields:
+    project: 1
+    objective: 10
+    condition: 35
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 139
+  fields:
+    project: 3
+    objective: 10
+    condition: 35
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 140
+  fields:
+    project: 4
+    objective: 10
+    condition: 35
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 141
+  fields:
+    project: 2
+    objective: 10
+    condition: 36
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 142
+  fields:
+    project: 1
+    objective: 10
+    condition: 36
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 143
+  fields:
+    project: 3
+    objective: 10
+    condition: 36
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 144
+  fields:
+    project: 4
+    objective: 10
+    condition: 36
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 145
+  fields:
+    project: 2
+    objective: 11
+    condition: 37
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 146
+  fields:
+    project: 1
+    objective: 11
+    condition: 37
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 147
+  fields:
+    project: 3
+    objective: 11
+    condition: 37
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 148
+  fields:
+    project: 4
+    objective: 11
+    condition: 37
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 149
+  fields:
+    project: 2
+    objective: 11
+    condition: 38
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 150
+  fields:
+    project: 1
+    objective: 11
+    condition: 38
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 151
+  fields:
+    project: 3
+    objective: 11
+    condition: 38
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 152
+  fields:
+    project: 4
+    objective: 11
+    condition: 38
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 153
+  fields:
+    project: 2
+    objective: 11
+    condition: 39
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 154
+  fields:
+    project: 1
+    objective: 11
+    condition: 39
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 155
+  fields:
+    project: 3
+    objective: 11
+    condition: 39
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 156
+  fields:
+    project: 4
+    objective: 11
+    condition: 39
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 157
+  fields:
+    project: 2
+    objective: 11
+    condition: 40
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 158
+  fields:
+    project: 1
+    objective: 11
+    condition: 40
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 159
+  fields:
+    project: 3
+    objective: 11
+    condition: 40
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 160
+  fields:
+    project: 4
+    objective: 11
+    condition: 40
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 161
+  fields:
+    project: 5
+    objective: 7
+    condition: 24
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 162
+  fields:
+    project: 5
+    objective: 7
+    condition: 26
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 163
+  fields:
+    project: 5
+    objective: 7
+    condition: 25
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 164
+  fields:
+    project: 5
+    objective: 1
+    condition: 1
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 165
+  fields:
+    project: 5
+    objective: 1
+    condition: 2
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 166
+  fields:
+    project: 5
+    objective: 1
+    condition: 3
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 167
+  fields:
+    project: 5
+    objective: 1
+    condition: 4
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 168
+  fields:
+    project: 5
+    objective: 1
+    condition: 5
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 169
+  fields:
+    project: 5
+    objective: 1
+    condition: 6
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 170
+  fields:
+    project: 5
+    objective: 2
+    condition: 7
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 171
+  fields:
+    project: 5
+    objective: 2
     condition: 8
     done: false
+- model: projects.projectobjectivecondition
+  pk: 172
+  fields:
+    project: 5
+    objective: 2
+    condition: 9
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 173
+  fields:
+    project: 5
+    objective: 2
+    condition: 10
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 174
+  fields:
+    project: 5
+    objective: 11
+    condition: 37
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 175
+  fields:
+    project: 5
+    objective: 11
+    condition: 38
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 176
+  fields:
+    project: 5
+    objective: 11
+    condition: 39
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 177
+  fields:
+    project: 5
+    objective: 11
+    condition: 40
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 178
+  fields:
+    project: 5
+    objective: 5
+    condition: 18
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 179
+  fields:
+    project: 5
+    objective: 5
+    condition: 19
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 180
+  fields:
+    project: 5
+    objective: 5
+    condition: 20
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 181
+  fields:
+    project: 5
+    objective: 3
+    condition: 11
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 182
+  fields:
+    project: 5
+    objective: 3
+    condition: 12
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 183
+  fields:
+    project: 5
+    objective: 3
+    condition: 13
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 184
+  fields:
+    project: 5
+    objective: 3
+    condition: 14
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 185
+  fields:
+    project: 5
+    objective: 4
+    condition: 15
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 186
+  fields:
+    project: 5
+    objective: 4
+    condition: 16
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 187
+  fields:
+    project: 5
+    objective: 4
+    condition: 17
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 188
+  fields:
+    project: 5
+    objective: 10
+    condition: 34
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 189
+  fields:
+    project: 5
+    objective: 10
+    condition: 35
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 190
+  fields:
+    project: 5
+    objective: 10
+    condition: 36
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 191
+  fields:
+    project: 5
+    objective: 6
+    condition: 21
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 192
+  fields:
+    project: 5
+    objective: 6
+    condition: 22
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 193
+  fields:
+    project: 5
+    objective: 6
+    condition: 23
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 194
+  fields:
+    project: 5
+    objective: 8
+    condition: 28
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 195
+  fields:
+    project: 5
+    objective: 8
+    condition: 29
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 196
+  fields:
+    project: 5
+    objective: 8
+    condition: 30
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 197
+  fields:
+    project: 5
+    objective: 8
+    condition: 27
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 198
+  fields:
+    project: 5
+    objective: 9
+    condition: 31
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 199
+  fields:
+    project: 5
+    objective: 9
+    condition: 32
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 200
+  fields:
+    project: 5
+    objective: 9
+    condition: 33
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 201
+  fields:
+    project: 6
+    objective: 7
+    condition: 24
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 202
+  fields:
+    project: 6
+    objective: 7
+    condition: 26
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 203
+  fields:
+    project: 6
+    objective: 7
+    condition: 25
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 204
+  fields:
+    project: 6
+    objective: 1
+    condition: 1
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 205
+  fields:
+    project: 6
+    objective: 1
+    condition: 2
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 206
+  fields:
+    project: 6
+    objective: 1
+    condition: 3
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 207
+  fields:
+    project: 6
+    objective: 1
+    condition: 4
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 208
+  fields:
+    project: 6
+    objective: 1
+    condition: 5
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 209
+  fields:
+    project: 6
+    objective: 1
+    condition: 6
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 210
+  fields:
+    project: 6
+    objective: 2
+    condition: 7
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 211
+  fields:
+    project: 6
+    objective: 2
+    condition: 8
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 212
+  fields:
+    project: 6
+    objective: 2
+    condition: 9
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 213
+  fields:
+    project: 6
+    objective: 2
+    condition: 10
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 214
+  fields:
+    project: 6
+    objective: 11
+    condition: 37
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 215
+  fields:
+    project: 6
+    objective: 11
+    condition: 38
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 216
+  fields:
+    project: 6
+    objective: 11
+    condition: 39
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 217
+  fields:
+    project: 6
+    objective: 11
+    condition: 40
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 218
+  fields:
+    project: 6
+    objective: 5
+    condition: 18
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 219
+  fields:
+    project: 6
+    objective: 5
+    condition: 19
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 220
+  fields:
+    project: 6
+    objective: 5
+    condition: 20
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 221
+  fields:
+    project: 6
+    objective: 3
+    condition: 11
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 222
+  fields:
+    project: 6
+    objective: 3
+    condition: 12
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 223
+  fields:
+    project: 6
+    objective: 3
+    condition: 13
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 224
+  fields:
+    project: 6
+    objective: 3
+    condition: 14
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 225
+  fields:
+    project: 6
+    objective: 4
+    condition: 15
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 226
+  fields:
+    project: 6
+    objective: 4
+    condition: 16
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 227
+  fields:
+    project: 6
+    objective: 4
+    condition: 17
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 228
+  fields:
+    project: 6
+    objective: 10
+    condition: 34
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 229
+  fields:
+    project: 6
+    objective: 10
+    condition: 35
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 230
+  fields:
+    project: 6
+    objective: 10
+    condition: 36
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 231
+  fields:
+    project: 6
+    objective: 6
+    condition: 21
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 232
+  fields:
+    project: 6
+    objective: 6
+    condition: 22
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 233
+  fields:
+    project: 6
+    objective: 6
+    condition: 23
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 234
+  fields:
+    project: 6
+    objective: 8
+    condition: 28
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 235
+  fields:
+    project: 6
+    objective: 8
+    condition: 29
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 236
+  fields:
+    project: 6
+    objective: 8
+    condition: 30
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 237
+  fields:
+    project: 6
+    objective: 8
+    condition: 27
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 238
+  fields:
+    project: 6
+    objective: 9
+    condition: 31
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 239
+  fields:
+    project: 6
+    objective: 9
+    condition: 32
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 240
+  fields:
+    project: 6
+    objective: 9
+    condition: 33
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 241
+  fields:
+    project: 7
+    objective: 7
+    condition: 24
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 242
+  fields:
+    project: 7
+    objective: 7
+    condition: 26
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 243
+  fields:
+    project: 7
+    objective: 7
+    condition: 25
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 244
+  fields:
+    project: 7
+    objective: 1
+    condition: 1
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 245
+  fields:
+    project: 7
+    objective: 1
+    condition: 2
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 246
+  fields:
+    project: 7
+    objective: 1
+    condition: 3
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 247
+  fields:
+    project: 7
+    objective: 1
+    condition: 4
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 248
+  fields:
+    project: 7
+    objective: 1
+    condition: 5
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 249
+  fields:
+    project: 7
+    objective: 1
+    condition: 6
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 250
+  fields:
+    project: 7
+    objective: 2
+    condition: 7
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 251
+  fields:
+    project: 7
+    objective: 2
+    condition: 8
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 252
+  fields:
+    project: 7
+    objective: 2
+    condition: 9
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 253
+  fields:
+    project: 7
+    objective: 2
+    condition: 10
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 254
+  fields:
+    project: 7
+    objective: 11
+    condition: 37
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 255
+  fields:
+    project: 7
+    objective: 11
+    condition: 38
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 256
+  fields:
+    project: 7
+    objective: 11
+    condition: 39
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 257
+  fields:
+    project: 7
+    objective: 11
+    condition: 40
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 258
+  fields:
+    project: 7
+    objective: 5
+    condition: 18
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 259
+  fields:
+    project: 7
+    objective: 5
+    condition: 19
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 260
+  fields:
+    project: 7
+    objective: 5
+    condition: 20
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 261
+  fields:
+    project: 7
+    objective: 3
+    condition: 11
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 262
+  fields:
+    project: 7
+    objective: 3
+    condition: 12
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 263
+  fields:
+    project: 7
+    objective: 3
+    condition: 13
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 264
+  fields:
+    project: 7
+    objective: 3
+    condition: 14
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 265
+  fields:
+    project: 7
+    objective: 4
+    condition: 15
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 266
+  fields:
+    project: 7
+    objective: 4
+    condition: 16
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 267
+  fields:
+    project: 7
+    objective: 4
+    condition: 17
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 268
+  fields:
+    project: 7
+    objective: 10
+    condition: 34
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 269
+  fields:
+    project: 7
+    objective: 10
+    condition: 35
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 270
+  fields:
+    project: 7
+    objective: 10
+    condition: 36
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 271
+  fields:
+    project: 7
+    objective: 6
+    condition: 21
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 272
+  fields:
+    project: 7
+    objective: 6
+    condition: 22
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 273
+  fields:
+    project: 7
+    objective: 6
+    condition: 23
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 274
+  fields:
+    project: 7
+    objective: 8
+    condition: 28
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 275
+  fields:
+    project: 7
+    objective: 8
+    condition: 29
+    done: false
+- model: projects.projectobjectivecondition
+  pk: 276
+  fields:
+    project: 7
+    objective: 8
+    condition: 30
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 277
+  fields:
+    project: 7
+    objective: 8
+    condition: 27
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 278
+  fields:
+    project: 7
+    objective: 9
+    condition: 31
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 279
+  fields:
+    project: 7
+    objective: 9
+    condition: 32
+    done: true
+- model: projects.projectobjectivecondition
+  pk: 280
+  fields:
+    project: 7
+    objective: 9
+    condition: 33
+    done: true
 - model: auth.user
   pk: 1
   fields:
-    password: pbkdf2_sha256$870000$eJVg0VMpKcmZw1ObfN8tQF$jKJrgxHD56EUNK8dzyvislcb20CHdKsytxfaLsNnCSw=
-    last_login: 2025-01-29 07:47:32.502489+00:00
+    password: pbkdf2_sha256$870000$wrLgDLm6LnfRMMx70aSref$+/mKdBWGs7a62LOYowsqKLv+QpJ71gCk/+cd3vPEuNY=
+    last_login: 2025-02-02 00:10:16.371223+00:00
     is_superuser: true
     username: test
     first_name: ''
@@ -3016,6 +6673,6 @@
     email: ''
     is_staff: true
     is_active: true
-    date_joined: 2025-01-28 20:40:30.315826+00:00
+    date_joined: 2025-02-02 00:10:09.583882+00:00
     groups: []
     user_permissions: []

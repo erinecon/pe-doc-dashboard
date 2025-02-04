@@ -4,24 +4,40 @@ from django.utils.text import slugify
 
 from framework.models import ProjectStatus, WorkCycle, Level, Objective, Condition
 
-NA = "na"
-PLANNED = "PL"
-STARTED = "ST"
-DEFERRED = "DE"
-BLOCKED = "BL"
-INACTIVE = "IN"
-
 
 class LevelCommitment(models.Model):
     # records a commitment, to a level of an objective of a project, for a particular work cycle
 
     work_cycle = models.ForeignKey(WorkCycle, on_delete=models.CASCADE)
-    project_objective = models.ForeignKey("ProjectObjective", on_delete=models.CASCADE)
+    project = models.ForeignKey("Project", on_delete=models.CASCADE)
+    objective = models.ForeignKey(Objective, on_delete=models.CASCADE)
     committed = models.BooleanField(default=False)
     level = models.ForeignKey(Level, on_delete=models.CASCADE)
 
     class Meta:
         ordering = ["work_cycle", "level"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["project", "objective", "work_cycle", "level"],
+                name="unique_level_attributes",
+            )
+        ]
+
+    def __str__(self):
+        return " > ".join(
+            (self.project.name, self.objective.name, self.work_cycle.name)
+        )
+
+    def projectobjective(self):
+        return ProjectObjective.objects.get(
+            project=self.project, objective=self.objective
+        )
+
+
+class QI(models.Model):
+    project = models.ForeignKey("Project", on_delete=models.CASCADE)
+    workcycle = models.ForeignKey(WorkCycle, on_delete=models.CASCADE)
+    value = models.SmallIntegerField(default=0)
 
 
 class ProjectGroup(models.Model):
@@ -55,20 +71,21 @@ class Project(models.Model):
         return self.name
 
     def save(self, **kwargs):
-        # required in order to ensure that when a new Project (row) is added to the dashboard,
-        # all the existing Objectives (columns) are associated with it via ProjectObjectives;
-        # in turn each ProjectObjective needs to have ProjectObjectiveConditions created for it.
-
         super().save(**kwargs)
 
-        # For each Objective, create a ProjectObjective instance for this Project if missing
+        # when a new Project is added propagate it to all existing Objectives
         for objective in Objective.objects.exclude(project=self):
-            projectobjective = ProjectObjective(project=self, objective=objective)
-            projectobjective.save()
+            ProjectObjective.objects.create(project=self, objective=objective)
+
+            # and propagate the Conditions to the ProjectObjective
             for condition in Condition.objects.filter(objective=objective):
                 ProjectObjectiveCondition.objects.get_or_create(
-                    condition=condition, projectobjective=projectobjective
+                    project=self, objective=objective, condition=condition
                 )
+
+        # make sure there's a QI object for this Project for each WorkCycle
+        for workcycle in WorkCycle.objects.all():
+            QI.objects.get_or_create(workcycle=workcycle, project=self)
 
     def quality_indicator(self):
         x = 0
@@ -79,6 +96,9 @@ class Project(models.Model):
             except AttributeError:
                 pass
         return x
+
+    def quality_history(self):
+        return QI.objects.filter(project=self)
 
     def review_freshness(self):
         # consider using the database to define these values instead
@@ -98,6 +118,7 @@ class Project(models.Model):
 
 
 class ProjectObjective(models.Model):
+
     NA = "na"
     PLANNED = "PL"
     DEFERRED = "DE"
@@ -122,14 +143,7 @@ class ProjectObjective(models.Model):
         blank=True,
     )
 
-    work_cycles = models.ManyToManyField(WorkCycle, through=LevelCommitment)
-
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields=["project", "objective"], name="unique_project_objective"
-            )
-        ]
+    # work_cycles = models.ManyToManyField(WorkCycle, through=LevelCommitment)
 
     def __str__(self):
         return " > ".join((self.project.name, self.objective.name))
@@ -137,7 +151,10 @@ class ProjectObjective(models.Model):
     def status(self):
         for level in reversed(Level.objects.all()):
             if ProjectObjectiveCondition.objects.filter(
-                projectobjective=self, condition__level=level, done=True
+                project=self.project,
+                objective=self.objective,
+                condition__level=level,
+                done=True,
             ):
                 return level
 
@@ -151,22 +168,44 @@ class ProjectObjective(models.Model):
 
     class Meta:
         ordering = ["project", "objective"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["project", "objective"], name="unique_project_objective"
+            )
+        ]
 
 
 class ProjectObjectiveCondition(models.Model):
 
-    projectobjective = models.ForeignKey(ProjectObjective, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    objective = models.ForeignKey(Objective, on_delete=models.CASCADE)
     condition = models.ForeignKey(Condition, on_delete=models.CASCADE)
     done = models.BooleanField(default=False)
+
+    def projectobjective(self):
+        return ProjectObjective.objects.get(
+            project=self.project, objective=self.objective
+        )
+
+    def levelcommitments(self):
+        return LevelCommitment.objects.filter(
+            project=self.project, objective=self.objective, level=self.level()
+        )
 
     def level(self):
         return self.condition.level
 
     def __str__(self):
-        return " > ".join((self.projectobjective.__str__(), self.condition.name))
+        return " > ".join((self.project.name, self.objective.name, self.condition.name))
 
     def name(self):
         return self.condition.name
 
     class Meta:
-        ordering = ["condition"]
+        ordering = ["project", "objective", "condition"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["project", "objective", "condition"],
+                name="unique_project_objective_condition",
+            )
+        ]

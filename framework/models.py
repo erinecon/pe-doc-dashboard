@@ -26,24 +26,41 @@ class WorkCycle(models.Model):
         return self.name
 
     def save(self, **kwargs):
-        # when a new WorkCycle is added propagate it to all existing LevelCommitments
+        # when a new WorkCycle is added, create a LevelCommitment for it
+
+        # to do: if Conditions with new Levels are added for an Obective,
+        # we also need to propagate the LevelCommitment objects
 
         from projects.models import (
             ProjectObjective,
             LevelCommitment,
+            Project,
+            QI,
         )  # avoids circular import
 
         super().save(**kwargs)
 
         # get all ProjectObjectives
         projectobjectives = ProjectObjective.objects.all()
+        print("checking before levels")
 
-        for project_objective in projectobjectives:
-
-            for level in Level.objects.all():
-                LevelCommitment.objects.get_or_create(
-                    work_cycle=self, project_objective=project_objective, level=level
+        for level in Level.objects.all():
+            print("checking across levels")
+            for project_objective in projectobjectives.filter(
+                objective__condition__level=level
+            ):
+                print("checking across pos")
+                l = LevelCommitment.objects.get_or_create(
+                    work_cycle=self,
+                    project=project_objective.project,
+                    objective=project_objective.objective,
+                    level=level,
                 )
+                print("creating", l)
+
+        # make sure there's a QI object for this WorkCycle for each Project
+        for project in Project.objects.all():
+            QI.objects.get_or_create(workcycle=self, project=project)
 
 
 class ObjectiveGroup(models.Model):
@@ -57,6 +74,7 @@ class Objective(models.Model):
     # a dimension in which quality can be measured
 
     name = models.CharField(max_length=100)
+    description = models.TextField(null=True, blank=True)
     group = models.ForeignKey("ObjectiveGroup", on_delete=models.CASCADE)
     weight = models.SmallIntegerField()
 
@@ -101,7 +119,9 @@ class Condition(models.Model):
 
         for projectobjective in projectobjectives:
             ProjectObjectiveCondition.objects.get_or_create(
-                projectobjective=projectobjective, condition=self
+                project=projectobjective.project,
+                objective=projectobjective.objective,
+                condition=self,
             )
 
     class Meta:
