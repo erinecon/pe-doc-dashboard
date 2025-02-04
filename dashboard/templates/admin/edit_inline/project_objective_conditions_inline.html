@@ -1,4 +1,5 @@
-{% load i18n admin_urls static admin_modify %}
+{% load i18n admin_urls static admin_modify project_tags %}
+
 <div class="js-inline-admin-formset inline-group" id="{{ inline_admin_formset.formset.prefix }}-group"
      data-inline-type="tabular"
      data-inline-formset="{{ inline_admin_formset.inline_formset_data }}">
@@ -16,12 +17,14 @@
   {% if inline_admin_formset.is_collapsible %}</summary>{% endif %}
    {{ inline_admin_formset.formset.non_form_errors }}
    <table class="objectives">
+
      <thead><tr>
      {% for field in inline_admin_formset.fields %}
        <th class="column-{{ field.name }}{% if field.required %} required{% endif %}{% if field.widget.is_hidden %} hidden{% endif %}">{{ field.label|capfirst }}
        {% if field.help_text %}<img src="{% static "admin/img/icon-unknown.svg" %}" class="help help-tooltip" width="10" height="10" alt="({{ field.help_text|striptags }})" title="{{ field.help_text|striptags }}">{% endif %}
        </th>
      {% endfor %}
+     {% for work_cycle in work_cycles %}<th>{{ work_cycle }}</th>{% endfor %}
      {% if inline_admin_formset.formset.can_delete and inline_admin_formset.has_delete_permission %}<th>{% translate "Delete?" %}</th>{% endif %}
      </tr></thead>
 
@@ -32,14 +35,14 @@
      {% for objective_formset in objective_list %}
         <tr class="objective objective-name">
           <td>{{ objective_formset.grouper.name }}</td>
-          <td>{{ objective_formset.grouper.status }}</td>
+          <td colspan="{{ work_cycles|length|add:"2" }}">{{ objective_formset.grouper.status }}</td>
         </tr>
         
         {% if objective_formset.grouper.objective.description %}
           <tr class="objective objective-description">
-            <td colspan="2">{{ objective_formset.grouper.objective.description }}</td>
+            <td colspan="{{ work_cycles|length|add:"2" }}">{{ objective_formset.grouper.objective.description }}</td>
           </tr>
-        {% endif %}  
+        {% endif %}
 
         {% comment %} grouper: level {% endcomment %}       
         {% regroup objective_formset.list by form.instance.level as level_list %}
@@ -47,6 +50,10 @@
           <tr class="level">
             <td></td>
             <td>{{ level_formset.grouper }}</td>
+
+            {% for work_cycle in work_cycles %}<td>
+              {% work_cycle_commitment work_cycle adminform.form.instance objective_formset.grouper.objective level_formset.grouper %}
+            </td>{% endfor %}
 
           {% for inline_admin_form in level_formset.list %}
           {% if inline_admin_form.form.non_field_errors %}

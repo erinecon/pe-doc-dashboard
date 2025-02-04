@@ -14,14 +14,6 @@ class LevelCommitment(models.Model):
     committed = models.BooleanField(default=False)
     level = models.ForeignKey(Level, on_delete=models.CASCADE)
 
-    class Meta:
-        ordering = ["work_cycle", "level"]
-        constraints = [
-            models.UniqueConstraint(
-                fields=["project", "objective", "work_cycle", "level"],
-                name="unique_level_attributes",
-            )
-        ]
 
     def __str__(self):
         return " > ".join(
@@ -32,6 +24,15 @@ class LevelCommitment(models.Model):
         return ProjectObjective.objects.get(
             project=self.project, objective=self.objective
         )
+
+    class Meta:
+        ordering = ["work_cycle", "level"]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["project", "objective", "work_cycle", "level"],
+                name="unique_level_attributes",
+            )
+        ]
 
 
 class QI(models.Model):
@@ -142,8 +143,6 @@ class ProjectObjective(models.Model):
         null=True,
         blank=True,
     )
-
-    # work_cycles = models.ManyToManyField(WorkCycle, through=LevelCommitment)
 
     def __str__(self):
         return " > ".join((self.project.name, self.objective.name))

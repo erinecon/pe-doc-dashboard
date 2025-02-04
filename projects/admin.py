@@ -5,11 +5,12 @@ from .models import (
     ProjectGroup,
     Project,
     ProjectObjective,
-    Condition,
     ProjectObjectiveCondition,
     LevelCommitment,
     QI,
 )
+
+from framework.models import WorkCycle
 
 
 class LevelCommitmentInline(admin.TabularInline):
@@ -22,26 +23,16 @@ class LevelCommitmentInline(admin.TabularInline):
 
 # ---- ProjectAdmin
 
-from django.forms import BaseInlineFormSet
 from django.forms import inlineformset_factory
-
-
-class CustomInlineFormSet(BaseInlineFormSet):
-    pass
-    # should define how we call inlineformset_factory here, using
-
-
-class ProjectObjectiveConditionInlineForm(forms.ModelForm):
-    pass
-
 
 class ProjectObjectiveConditionInline(admin.TabularInline):
     model = ProjectObjectiveCondition
     can_delete = False
     readonly_fields = ["condition"]
     exclude = ["condition", "objective", "level"]
-    template = "admin/edit_inline/custominline.html"
-    form = ProjectObjectiveConditionInlineForm
+    template = "admin/edit_inline/project_objective_conditions_inline.html"
+
+    # this appears to do nothing at all
     formset = inlineformset_factory(
         Project,
         ProjectObjectiveCondition,
@@ -100,7 +91,7 @@ class ProjectObjectiveAdmin(admin.ModelAdmin):
 class ProjectAdmin(admin.ModelAdmin):
     inlines = [LevelCommitmentInline, ProjectObjectiveConditionInline]
     list_display = ["name", "owner", "driver", "last_review", "last_review_status"]
-    change_form_template = "admin/project_change_form.html"
+    # change_form_template = "admin/project_change_form.html"
 
     fieldsets = (
         (
@@ -114,6 +105,16 @@ class ProjectAdmin(admin.ModelAdmin):
             },
         ),
     )
+
+    def change_view(self, request, object_id, form_url="", extra_context=None):
+        extra_context = extra_context or {}
+        extra_context["work_cycles"] = WorkCycle.objects.all()
+        return super().change_view(
+            request,
+            object_id,
+            form_url,
+            extra_context=extra_context,
+        )
 
 
 admin.site.register(ProjectGroup)

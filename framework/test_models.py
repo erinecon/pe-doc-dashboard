@@ -102,39 +102,3 @@ def test_workcycle_is_propagated_to_levelcommitments(
     # there should be a new LevelCommitment
     assert work_cycle.levelcommitment_set.count() == 1
     assert work_cycle.levelcommitment_set.filter(work_cycle=work_cycle).exists()
-
-
-# @pytest.mark.django_db
-# class TestCondition(object):
-
-#     @pytest.fixture
-#     def og(db):
-#         return ObjectiveGroup.objects.create(name="test_objective_group")
-
-#     @pytest.fixture
-#     def o(og):
-#         return Objective.objects.create(name="test_objective", group=og, weight=1)
-
-#     @pytest.fixture
-#     def l(db):
-#         return Level.objects.create(name="test_level", value=1)
-
-#     @pytest.fixture
-#     def p(db):
-#         return Project.objects.create(name="test_project", owner="test_owner", driver="test_driver")
-
-#     # og = ObjectiveGroup.objects.create(name="test_objective_group")
-#     # o = Objective.objects.create(name="test_objective", group=og, weight=1)
-#     # l = Level.objects.create(name="test_level", value=1)
-#     # p = Project.objects.create(name="test_project", owner="test_owner", driver="test_driver")
-
-#     @pytest.mark.django_db
-#     def test_condition_is_propagated_to_projectobjectives(po, p, o):
-
-#         po = ProjectObjective.objects.create(project=p, objective=o)
-#         assert po.projectobjectivecondition_set.all()
-#         assert 2==3
-
-#         # c = Condition.objects.create(name="test_condition", objective=self.o, level=self.l)
-#         # assert(po.projectobjectivecondition_set.all())
-#         # assert(ProjectObjectiveCondition.objects.get(projectobjective=po, condition=c))
