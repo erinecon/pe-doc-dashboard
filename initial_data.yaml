@@ -41,6 +41,10 @@
   pk: 2
   fields:
     name: '24.10'
+- model: framework.workcycle
+  pk: 3
+  fields:
+    name: '25.04'
 - model: framework.objectivegroup
   pk: 1
   fields:
@@ -410,7 +414,7 @@
     work_cycle: 1
     project: 2
     objective: 11
-    committed: false
+    committed: true
     level: 1
 - model: projects.levelcommitment
   pk: 5
@@ -4076,6 +4080,1854 @@
     objective: 9
     committed: false
     level: 3
+- model: projects.levelcommitment
+  pk: 463
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 7
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 464
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 1
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 465
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 2
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 466
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 11
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 467
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 5
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 468
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 3
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 469
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 4
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 470
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 10
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 471
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 6
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 472
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 8
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 473
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 9
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 474
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 7
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 475
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 1
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 476
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 2
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 477
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 11
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 478
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 5
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 479
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 3
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 480
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 4
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 481
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 10
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 482
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 6
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 483
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 8
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 484
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 9
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 485
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 7
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 486
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 1
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 487
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 2
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 488
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 11
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 489
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 5
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 490
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 3
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 491
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 4
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 492
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 10
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 493
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 6
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 494
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 8
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 495
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 9
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 496
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 7
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 497
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 1
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 498
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 2
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 499
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 11
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 500
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 5
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 501
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 3
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 502
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 4
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 503
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 10
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 504
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 6
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 505
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 8
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 506
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 9
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 507
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 7
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 508
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 1
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 509
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 2
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 510
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 11
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 511
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 5
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 512
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 3
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 513
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 4
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 514
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 10
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 515
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 6
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 516
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 8
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 517
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 9
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 518
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 7
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 519
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 1
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 520
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 2
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 521
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 11
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 522
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 5
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 523
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 3
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 524
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 4
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 525
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 10
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 526
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 6
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 527
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 8
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 528
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 9
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 529
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 7
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 530
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 1
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 531
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 2
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 532
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 11
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 533
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 5
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 534
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 3
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 535
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 4
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 536
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 10
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 537
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 6
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 538
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 8
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 539
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 9
+    committed: false
+    level: 1
+- model: projects.levelcommitment
+  pk: 540
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 541
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 542
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 543
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 544
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 545
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 546
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 547
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 548
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 549
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 550
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 551
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 552
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 553
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 554
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 555
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 556
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 557
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 558
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 559
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 560
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 561
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 562
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 563
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 564
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 565
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 566
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 567
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 568
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 569
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 570
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 571
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 572
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 573
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 574
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 575
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 576
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 577
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 578
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 579
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 580
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 581
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 582
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 583
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 584
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 585
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 586
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 587
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 588
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 589
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 590
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 591
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 592
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 593
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 594
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 595
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 596
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 597
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 598
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 599
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 600
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 601
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 602
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 603
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 604
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 605
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 606
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 7
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 607
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 1
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 608
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 2
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 609
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 11
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 610
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 5
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 611
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 3
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 612
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 4
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 613
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 10
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 614
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 6
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 615
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 8
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 616
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 9
+    committed: false
+    level: 2
+- model: projects.levelcommitment
+  pk: 617
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 618
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 619
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 620
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 621
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 622
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 623
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 624
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 625
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 626
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 627
+  fields:
+    work_cycle: 3
+    project: 2
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 628
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 629
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 630
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 631
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 632
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 633
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 634
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 635
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 636
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 637
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 638
+  fields:
+    work_cycle: 3
+    project: 1
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 639
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 640
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 641
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 642
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 643
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 644
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 645
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 646
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 647
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 648
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 649
+  fields:
+    work_cycle: 3
+    project: 6
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 650
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 651
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 652
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 653
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 654
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 655
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 656
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 657
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 658
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 659
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 660
+  fields:
+    work_cycle: 3
+    project: 3
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 661
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 662
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 663
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 664
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 665
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 666
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 667
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 668
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 669
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 670
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 671
+  fields:
+    work_cycle: 3
+    project: 7
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 672
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 673
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 674
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 675
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 676
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 677
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 678
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 679
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 680
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 681
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 682
+  fields:
+    work_cycle: 3
+    project: 5
+    objective: 9
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 683
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 7
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 684
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 1
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 685
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 2
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 686
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 11
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 687
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 5
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 688
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 3
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 689
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 4
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 690
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 10
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 691
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 6
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 692
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 8
+    committed: false
+    level: 3
+- model: projects.levelcommitment
+  pk: 693
+  fields:
+    work_cycle: 3
+    project: 4
+    objective: 9
+    committed: false
+    level: 3
 - model: projects.qi
   pk: 1
   fields:
@@ -4159,6 +6011,48 @@
   fields:
     project: 4
     workcycle: 2
+    value: 0
+- model: projects.qi
+  pk: 15
+  fields:
+    project: 2
+    workcycle: 3
+    value: 0
+- model: projects.qi
+  pk: 16
+  fields:
+    project: 1
+    workcycle: 3
+    value: 0
+- model: projects.qi
+  pk: 17
+  fields:
+    project: 6
+    workcycle: 3
+    value: 0
+- model: projects.qi
+  pk: 18
+  fields:
+    project: 3
+    workcycle: 3
+    value: 0
+- model: projects.qi
+  pk: 19
+  fields:
+    project: 7
+    workcycle: 3
+    value: 0
+- model: projects.qi
+  pk: 20
+  fields:
+    project: 5
+    workcycle: 3
+    value: 0
+- model: projects.qi
+  pk: 21
+  fields:
+    project: 4
+    workcycle: 3
     value: 0
 - model: projects.projectgroup
   pk: 1
