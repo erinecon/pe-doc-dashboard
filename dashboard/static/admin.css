@@ -1,0 +1,26 @@
+
+
+table.objectives tr.has_original td {padding-top: 0px!important}
+
+
+/* normal rows of the inline */
+table.objectives tr.form-row,
+table.objectives tr.form-row td
+  {
+    border-bottom: none!important;
+    padding: 0 8px;
+}
+
+table.objectives tr {background: var(--body-bg)}
+
+table.objectives tr.objective td,
+table.objectives tr.level td {
+    
+    border-bottom: none;
+    border-top: 1px solid var(--hairline-color);
+}
+
+table.objectives tr.objective {background-color: #f0f0f0;}
+table.objectives tr.objective-name td,
+table.objectives tr.level td
+ {font-weight: bold;}

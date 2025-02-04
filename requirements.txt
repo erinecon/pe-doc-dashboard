@@ -1,2 +1,4 @@
 Django==5.1.5
 PyYAML==6.0.2
+pytest==8.3.4
+docutils==0.21.2
