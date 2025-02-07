@@ -4,8 +4,10 @@ Dashboard
 
 A Django-based database-driven web application, to track progress of projects against a set of criteria to determine quality or development.
 
+
 Launch a development version of the application
 ===============================================
+
 
 Installation
 --------------
@@ -28,7 +30,7 @@ Create the database tables
 
     ./manage.py migrate
 
-For convenience some data, including an admin user (*test*, password *test*), are provided in ``initial_data.yaml``, and can be loaded with::
+For convenience some data are provided in ``initial_data.yaml``, and can be loaded with::
 
     ./manage.py loaddata initial_data.yaml
 
@@ -37,9 +39,15 @@ Launch the site
 ~~~~~~~~~~~~~~~
 
 ::
-    
-    ./manage.py runserver    
 
-Login in to the admin http://localhost:8000/admin or explore the dashboard.
+    ./manage.py runserver
 
-Nearly every cell in the dashboard is a link to the relevant admin view.
+Login in to the admin http://localhost:8000/admin (use admin user *test*, password *test*, if you loaded the provided initial data) or explore the dashboard.
+
+Nearly every cell in the dashboard is a link to the relevant admin view. The most interesting admin view is for *Projects*, for example http://localhost:8000/admin/projects/project/2/change/.
+
+
+Automated tests
+===============
+
+Some automated tests are included and can be executed by running `pytest` (while in the root directory, with the virtual environment activated).

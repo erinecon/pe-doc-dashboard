@@ -13,18 +13,6 @@ from .models import (
 from framework.models import WorkCycle
 
 
-class LevelCommitmentInline(admin.TabularInline):
-    model = LevelCommitment
-    max_num = 0
-    can_delete = False
-    readonly_fields = ["objective", "work_cycle", "level"]
-    classes = ["collapse"]
-
-
-# ---- ProjectAdmin
-
-from django.forms import inlineformset_factory
-
 class ProjectObjectiveConditionInline(admin.TabularInline):
     model = ProjectObjectiveCondition
     can_delete = False
@@ -33,7 +21,7 @@ class ProjectObjectiveConditionInline(admin.TabularInline):
     template = "admin/edit_inline/project_objective_conditions_inline.html"
 
     # this appears to do nothing at all
-    formset = inlineformset_factory(
+    formset = forms.inlineformset_factory(
         Project,
         ProjectObjectiveCondition,
         fields=["done"],
@@ -41,6 +29,31 @@ class ProjectObjectiveConditionInline(admin.TabularInline):
         extra=0,
         max_num=0,
     )
+
+    def has_add_permission(self, request, obj):
+        return False
+
+    def has_delete_permission(self, request, obj):
+        return False
+
+
+class LevelCommitmentInline(admin.TabularInline):
+    model = LevelCommitment
+    max_num = 0
+    can_delete = False
+    fields = ["committed"]
+    classes = ["collapse"]
+    template = "admin/edit_inline/level_commitments_inline.html"
+
+    def change_view(self, request, object_id, form_url="", extra_context=None):
+        extra_context = extra_context or {}
+        extra_context["work_cycles"] = WorkCycle.objects.all()
+        return super().change_view(
+            request,
+            object_id,
+            form_url,
+            extra_context=extra_context,
+        )
 
     def has_add_permission(self, request, obj):
         return False
@@ -60,7 +73,6 @@ class ProjectObjectiveInline(admin.TabularInline):
 
 @admin.register(ProjectObjective)
 class ProjectObjectiveAdmin(admin.ModelAdmin):
-    # inlines = [LevelCommitmentInline]
     readonly_fields = ["project", "objective", "status"]
 
     fieldsets = (
@@ -76,7 +88,6 @@ class ProjectObjectiveAdmin(admin.ModelAdmin):
     )
 
     def change_view(self, request, object_id, form_url="", extra_context=None):
-        print(request, object_id, extra_context)
         extra_context = extra_context or {}
         extra_context["test"] = "success!"
         return super().change_view(
@@ -89,9 +100,8 @@ class ProjectObjectiveAdmin(admin.ModelAdmin):
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    inlines = [LevelCommitmentInline, ProjectObjectiveConditionInline]
+    inlines = [ProjectObjectiveConditionInline, LevelCommitmentInline]
     list_display = ["name", "owner", "driver", "last_review", "last_review_status"]
-    # change_form_template = "admin/project_change_form.html"
 
     fieldsets = (
         (

@@ -42,25 +42,24 @@ class WorkCycle(models.Model):
 
         # get all ProjectObjectives
         projectobjectives = ProjectObjective.objects.all()
-        print("checking before levels")
 
         for level in Level.objects.all():
-            print("checking across levels")
             for project_objective in projectobjectives.filter(
                 objective__condition__level=level
             ):
-                print("checking across pos")
                 l = LevelCommitment.objects.get_or_create(
                     work_cycle=self,
                     project=project_objective.project,
                     objective=project_objective.objective,
                     level=level,
                 )
-                print("creating", l)
 
         # make sure there's a QI object for this WorkCycle for each Project
         for project in Project.objects.all():
             QI.objects.get_or_create(workcycle=self, project=project)
+
+    class Meta:
+        ordering = ["name"]
 
 
 class ObjectiveGroup(models.Model):

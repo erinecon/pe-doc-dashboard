@@ -10,17 +10,20 @@ table.objectives tr.form-row td
     border-bottom: none!important;
     padding: 0 8px;
 }
+table.objectives tr.level td {padding: 4px;}
 
 table.objectives tr {background: var(--body-bg)}
 
 table.objectives tr.objective td,
 table.objectives tr.level td {
-    
-    border-bottom: none;
+
+    border-bottom: 1px solid var(--hairline-color);
     border-top: 1px solid var(--hairline-color);
 }
 
-table.objectives tr.objective {background-color: #f0f0f0;}
+table.objectives tr.objective {background-color: black; color: white;}
+table.objectives tr.objective-description {background-color: white; color: black;}
+table.objectives tr.level {background-color: #f0f0f0;}
 table.objectives tr.objective-name td,
 table.objectives tr.level td
  {font-weight: bold;}

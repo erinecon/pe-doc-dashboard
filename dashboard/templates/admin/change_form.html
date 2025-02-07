@@ -1,0 +1,9 @@
+{% extends "admin/change_form.html"  %}
+
+{% block inline_field_sets %}
+
+    {% with condition_formset=inline_admin_formsets.0 commitment_formset=inline_admin_formsets.1  %}
+        {% include "admin/edit_inline/project_inlines.html" %}
+    {% endwith %}
+
+{% endblock %}

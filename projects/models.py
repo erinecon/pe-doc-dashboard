@@ -5,42 +5,6 @@ from django.utils.text import slugify
 from framework.models import ProjectStatus, WorkCycle, Level, Objective, Condition
 
 
-class LevelCommitment(models.Model):
-    # records a commitment, to a level of an objective of a project, for a particular work cycle
-
-    work_cycle = models.ForeignKey(WorkCycle, on_delete=models.CASCADE)
-    project = models.ForeignKey("Project", on_delete=models.CASCADE)
-    objective = models.ForeignKey(Objective, on_delete=models.CASCADE)
-    committed = models.BooleanField(default=False)
-    level = models.ForeignKey(Level, on_delete=models.CASCADE)
-
-
-    def __str__(self):
-        return " > ".join(
-            (self.project.name, self.objective.name, self.work_cycle.name)
-        )
-
-    def projectobjective(self):
-        return ProjectObjective.objects.get(
-            project=self.project, objective=self.objective
-        )
-
-    class Meta:
-        ordering = ["work_cycle", "level"]
-        constraints = [
-            models.UniqueConstraint(
-                fields=["project", "objective", "work_cycle", "level"],
-                name="unique_level_attributes",
-            )
-        ]
-
-
-class QI(models.Model):
-    project = models.ForeignKey("Project", on_delete=models.CASCADE)
-    workcycle = models.ForeignKey(WorkCycle, on_delete=models.CASCADE)
-    value = models.SmallIntegerField(default=0)
-
-
 class ProjectGroup(models.Model):
 
     name = models.CharField(max_length=200)
@@ -208,3 +172,48 @@ class ProjectObjectiveCondition(models.Model):
                 name="unique_project_objective_condition",
             )
         ]
+
+
+class LevelCommitment(models.Model):
+    # records a commitment, to a level of an objective of a project, for a particular work cycle
+
+    work_cycle = models.ForeignKey(WorkCycle, on_delete=models.CASCADE)
+    project = models.ForeignKey("Project", on_delete=models.CASCADE)
+    objective = models.ForeignKey(Objective, on_delete=models.CASCADE)
+    committed = models.BooleanField(default=False)
+    level = models.ForeignKey(Level, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return " > ".join(
+            (
+                self.project.name,
+                self.objective.name,
+                self.level.name,
+                self.work_cycle.name,
+            )
+        )
+
+    def projectobjective(self):
+        return ProjectObjective.objects.get(
+            project=self.project, objective=self.objective
+        )
+
+    class Meta:
+        ordering = [
+            "objective",
+            "level",
+            "work_cycle",
+        ]
+        constraints = [
+            models.UniqueConstraint(
+                fields=["project", "objective", "work_cycle", "level"],
+                name="unique_level_attributes",
+            )
+        ]
+
+
+class QI(models.Model):
+    # a snapshot of a project's quality indication per WorkCycle
+    project = models.ForeignKey("Project", on_delete=models.CASCADE)
+    workcycle = models.ForeignKey(WorkCycle, on_delete=models.CASCADE)
+    value = models.SmallIntegerField(default=0)
