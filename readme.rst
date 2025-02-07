@@ -50,4 +50,4 @@ Nearly every cell in the dashboard is a link to the relevant admin view. The mos
 Automated tests
 ===============
 
-Some automated tests are included and can be executed by running `pytest` (while in the root directory, with the virtual environment activated).
+Some automated tests are included and can be executed by running ``pytest`` (while in the root directory, with the virtual environment activated).
