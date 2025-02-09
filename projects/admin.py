@@ -43,7 +43,6 @@ class LevelCommitmentInline(admin.TabularInline):
     can_delete = False
     fields = ["committed"]
     classes = ["collapse"]
-    template = "admin/edit_inline/level_commitments_inline.html"
 
     def change_view(self, request, object_id, form_url="", extra_context=None):
         extra_context = extra_context or {}
@@ -102,6 +101,7 @@ class ProjectObjectiveAdmin(admin.ModelAdmin):
 class ProjectAdmin(admin.ModelAdmin):
     inlines = [ProjectObjectiveConditionInline, LevelCommitmentInline]
     list_display = ["name", "owner", "driver", "last_review", "last_review_status"]
+    # change_form_template = "admin/project_change_form.html"
 
     fieldsets = (
         (
