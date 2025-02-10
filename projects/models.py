@@ -48,9 +48,25 @@ class Project(models.Model):
                     project=self, objective=objective, condition=condition
                 )
 
+
+
         # make sure there's a QI object for this Project for each WorkCycle
-        for workcycle in WorkCycle.objects.all():
-            QI.objects.get_or_create(workcycle=workcycle, project=self)
+        for work_cycle in WorkCycle.objects.all():
+            QI.objects.get_or_create(workcycle=work_cycle, project=self)
+
+            # make sure there is a LevelCommitment for each WorkCycle/Level/Objective for the Project
+            print(work_cycle)
+            for objective in Objective.objects.filter(project=self):
+                for level in Level.objects.all():
+                    print(level)
+                    l = LevelCommitment.objects.get_or_create(
+                        work_cycle=work_cycle,
+                        project=self,
+                        objective=objective,
+                        level=level,
+                    )
+
+
 
     def quality_indicator(self):
         x = 0
@@ -180,8 +196,8 @@ class LevelCommitment(models.Model):
     work_cycle = models.ForeignKey(WorkCycle, on_delete=models.CASCADE)
     project = models.ForeignKey("Project", on_delete=models.CASCADE)
     objective = models.ForeignKey(Objective, on_delete=models.CASCADE)
-    committed = models.BooleanField(default=False)
     level = models.ForeignKey(Level, on_delete=models.CASCADE)
+    committed = models.BooleanField(default=False)
 
     def __str__(self):
         return " > ".join(

@@ -18,17 +18,6 @@ class ProjectObjectiveConditionInline(admin.TabularInline):
     can_delete = False
     readonly_fields = ["condition"]
     exclude = ["condition", "objective", "level"]
-    template = "admin/edit_inline/project_objective_conditions_inline.html"
-
-    # this appears to do nothing at all
-    formset = forms.inlineformset_factory(
-        Project,
-        ProjectObjectiveCondition,
-        fields=["done"],
-        can_delete=False,
-        extra=0,
-        max_num=0,
-    )
 
     def has_add_permission(self, request, obj):
         return False
@@ -97,11 +86,12 @@ class ProjectObjectiveAdmin(admin.ModelAdmin):
         )
 
 
+
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     inlines = [ProjectObjectiveConditionInline, LevelCommitmentInline]
     list_display = ["name", "owner", "driver", "last_review", "last_review_status"]
-    # change_form_template = "admin/project_change_form.html"
+    change_form_template = "admin/project_change_form.html"
 
     fieldsets = (
         (
@@ -130,3 +120,4 @@ class ProjectAdmin(admin.ModelAdmin):
 admin.site.register(ProjectGroup)
 admin.site.register(QI)
 admin.site.register(ProjectObjectiveCondition)
+admin.site.register(LevelCommitment)
