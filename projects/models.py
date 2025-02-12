@@ -121,13 +121,16 @@ class ProjectObjective(models.Model):
             ):
                 return level
 
-        return self.get_if_not_started_display()
+        return self.get_if_not_started_display() or "No activity"
 
     def status_slug(self):
         return slugify(self.status())
 
     def name(self):
         return self.objective.name
+
+    def description(self):
+        return self.objective.description
 
     class Meta:
         ordering = ["project", "objective"]
