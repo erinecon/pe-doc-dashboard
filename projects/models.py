@@ -125,12 +125,12 @@ class ProjectObjective(models.Model):
 
     def status(self):
         for level in reversed(Level.objects.all()):
-            if ProjectObjectiveCondition.objects.filter(
+            if not ProjectObjectiveCondition.objects.filter(
                 project=self.project,
                 objective=self.objective,
                 condition__level=level,
-                done=True,
-            ):
+                done=False,
+            ).exists():
                 return level
 
         return self.get_if_not_started_display() or "No activity"
