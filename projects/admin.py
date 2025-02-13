@@ -57,13 +57,12 @@ class ProjectObjectiveInline(admin.TabularInline):
     can_delete = False
     # fields = ("name", "description", "status",  "if_not_started")
     fieldsets = (
-        ("name", {
-            "fields": (("name",)),
-            "classes": ["objective-name"]
-            },
+        (
+            "name",
+            {"fields": (("name",)), "classes": ["objective-name"]},
         ),
         ("description", {"fields": (("description",))}),
-        ("status", {"fields": (( "status",))}),
+        ("status", {"fields": (("status",))}),
         ("if-not-started", {"fields": (("if_not_started",))}),
     )
     readonly_fields = ["name", "description", "status"]
@@ -103,10 +102,13 @@ class ProjectObjectiveAdmin(admin.ModelAdmin):
         )
 
 
-
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    inlines = [ProjectObjectiveInline, ProjectObjectiveConditionInline, LevelCommitmentInline]
+    inlines = [
+        ProjectObjectiveInline,
+        ProjectObjectiveConditionInline,
+        LevelCommitmentInline,
+    ]
     list_display = ["name", "owner", "driver", "last_review", "last_review_status"]
     change_form_template = "admin/project_change_form.html"
     save_on_top = True
@@ -127,7 +129,7 @@ class ProjectAdmin(admin.ModelAdmin):
     def change_view(self, request, object_id, form_url="", extra_context=None):
         extra_context = extra_context or {}
         extra_context["work_cycles"] = WorkCycle.objects.all()
-        extra_context['show_save_and_add_another'] = False
+        extra_context["show_save_and_add_another"] = False
 
         return super().change_view(
             request,
@@ -135,6 +137,7 @@ class ProjectAdmin(admin.ModelAdmin):
             form_url,
             extra_context=extra_context,
         )
+
 
 admin.site.register(ProjectGroup)
 admin.site.register(LevelCommitment)

@@ -14,4 +14,3 @@ def work_cycle_commitment(work_cycle, project, objective, level):
 @register.simple_tag
 def pack(*args):
     return zip(*args)
-

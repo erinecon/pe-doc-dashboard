@@ -48,8 +48,6 @@ class Project(models.Model):
                     project=self, objective=objective, condition=condition
                 )
 
-
-
         # make sure there's a QI object for this Project for each WorkCycle
         for work_cycle in WorkCycle.objects.all():
             QI.objects.get_or_create(workcycle=work_cycle, project=self)
@@ -65,8 +63,6 @@ class Project(models.Model):
                         objective=objective,
                         level=level,
                     )
-
-
 
     def quality_indicator(self):
         x = 0
