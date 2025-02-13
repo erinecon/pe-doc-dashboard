@@ -97,7 +97,7 @@ class Objective(models.Model):
 class Condition(models.Model):
 
     # e.g. "All new content is created according to Diátaxis principles"
-    name = models.CharField(max_length=100)
+    name = models.TextField(max_length=250)
     objective = models.ForeignKey(Objective, on_delete=models.CASCADE)
     level = models.ForeignKey(Level, on_delete=models.CASCADE)
 

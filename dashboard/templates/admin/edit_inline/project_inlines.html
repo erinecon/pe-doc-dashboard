@@ -4,138 +4,80 @@
      data-inline-type="tabular"
      data-inline-formset="{{ condition_formset.inline_formset_data }}">
 
-  <div class="tabular inline-related {% if forloop.last %}last-related{% endif %}">
+  <div class="tabular inline-related">
 
-    {{ condition_formset.formset.management_form }}
+  {{ condition_formset.formset.management_form }}
+  {{ commitment_formset.formset.management_form }}
+  {{ project_objective_formset.formset.management_form }}
 
     <fieldset class="module {{ condition_formset.classes }}" aria-labelledby="{{ condition_formset.formset.prefix }}-heading">
-      {% if condition_formset.is_collapsible %}<details><summary>{% endif %}
-      <h2 id="{{ condition_formset.formset.prefix }}-heading" class="inline-heading">
-        {% if condition_formset.formset.max_num == 1 %}
-          {{ condition_formset.opts.verbose_name|capfirst }}
-        {% else %}
-          {{ condition_formset.opts.verbose_name_plural|capfirst }}
-        {% endif %}
-      </h2>
-      {% if condition_formset.is_collapsible %}</summary>{% endif %}
 
       {{ condition_formset.formset.non_form_errors }}
 
       <table class="objectives">
 
-        <thead>
-          <tr>
-            {% for field in condition_formset.fields %}
-              <th class="column-{{ field.name }}{% if field.required %} required{% endif %}{% if field.widget.is_hidden %} hidden{% endif %}">{{ field.label|capfirst }}
-                {% if field.help_text %}<img src="{% static "admin/img/icon-unknown.svg" %}" class="help help-tooltip" width="10" height="10" alt="({{ field.help_text|striptags }})" title="{{ field.help_text|striptags }}">{% endif %}
-              </th>
-              {% endfor %}
+        <tbody>
 
-              {% for work_cycle in work_cycles %}<th>{{ work_cycle }}</th>{% endfor %}
 
-              {% if condition_formset.formset.can_delete and condition_formset.has_delete_permission %}<th>{% translate "Delete?" %}</th>{% endif %}
-          </tr>
-        </thead>
+          {% regroup condition_formset by form.instance.projectobjective as condition_objectives %}
+          {% regroup commitment_formset by form.instance.objective as commitment_objectives %}
 
-          <tbody>
+          {% pack project_objective_formset condition_objectives commitment_objectives as objectives %}
 
-            {% comment %} first group each formset by by ProjectObjective {% endcomment %}
-            {% regroup condition_formset by form.instance.projectobjective as condition_objectives %}
-            {% regroup commitment_formset by form.instance.objective as commitment_objectives %}
+          {% for objective_form, condition_project_objective_formset, commitment_project_objective_formset in objectives %}
 
-            {% for condition_objective_formset, commitment_objective_formset in condition_objectives|zip:commitment_objectives %}
+            <tr class="hidden">
+              <td>
+              {% if objective_form.needs_explicit_pk_field %}{{ objective_form.pk_field.field }}{% endif %}
+              {% if objective_form.fk_field %}{{ objective_form.fk_field.field }}{% endif %}
+              </td>
+            </tr>
 
-              <tr class="objective objective-name">
-                <td>{{ condition_objective_formset.grouper.name }}</td>
-                <td colspan="{{ work_cycles|length|add:"2" }}">{{ condition_objective_formset.grouper.status }}</td>
-              </tr>
+            <tr class="objective">
+              <td class="objective name" colspan="{{ work_cycles|length|add:"2" }}">{{ objective_form.original.name }}</td>
+            </tr>
 
-              {% if condition_objective_formset.grouper.objective.description %}
-                <tr class="objective objective-description">
-                  <td colspan="{{ work_cycles|length|add:"2" }}">{{ condition_objective_formset.grouper.objective.description }}</td>
-                </tr>
-              {% endif %}
+            <tr>
+              <td colspan="2">{{ objective_form.original.description|default:"" }}</td>
+              <td class="commitment-blank" colspan="{{ work_cycles|length }}"></td>
+            </tr>
 
-              {% comment %} then group each formset by by Level {% endcomment %}
-              {% regroup condition_objective_formset.list by form.instance.level as commitment_condition_formset %}
-              {% regroup commitment_objective_formset.list by form.instance.level as commitment_levels %}
+            <tr>
+              <td class="{{ objective_form.original.status|lower|slugify }}" colspan="1">
+                {{ objective_form.original.status }}
+              </td>
+              <td></td>
+              <td class="commitment-blank" colspan="{{ work_cycles|length }}"></td>
+            </tr>
 
-              {% for level_formset, commitment_level_formset in commitment_condition_formset|zip:commitment_levels %}
+            <tr>
+              <td colspan="1">{{ objective_form.form.if_not_started }}</td><td></td>
+              {% for work_cycle in work_cycles %}<td class="workcycle">{{ work_cycle }}</td>{% endfor %}
+            </tr>
 
-                <tr class="level">
-                  <td colspan="2">{{ level_formset.grouper }}</td>
 
-                  {% for inline_admin_form in commitment_level_formset.list %}
-                    {% if inline_admin_form.form.non_field_errors %}
+            {% regroup condition_project_objective_formset.list by form.instance.level as commitment_condition_formset %}
+            {% regroup commitment_project_objective_formset.list by form.instance.level as commitment_levels %}
 
-                      {% comment %} ugh {% endcomment %}
-                      <tr class="row-form-errors"><td colspan="{{ inline_admin_form|cell_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
+            {% pack commitment_condition_formset commitment_levels as commitments %}
 
-                    {% endif %}
+            {% for level_formset, commitment_level_formset in commitments %}
 
-                    {% comment %} we don't want this
-                    <tr class="form-row {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last and condition_objective_formset.has_add_permission %} empty-form{% endif %}"
-                id="{{ condition_objective_formset.formset.prefix }}-{% if forloop.last and condition_objective_formset.has_add_permission %}empty{% else %}{{ forloop.counter0 }}{% endif %}">
-                    {% endcomment %}
-
-                    {% comment %} need to find a better place for this {% endcomment %}
-                    {% if inline_admin_form.needs_explicit_pk_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
-                    {% if inline_admin_form.fk_field %}{{ inline_admin_form.fk_field.field }}{% endif %}
-
-                    {% comment %} the actual fields {% endcomment %}
-                    {% for fieldset in inline_admin_form %}
-                      {% for line in fieldset %}
-                      {% for field in line %}
-                        <td class="{% if field.field.name %}field-{{ field.field.name }}{% endif %}{% if field.field.is_hidden %} hidden{% endif %}">
-                          {% if field.is_readonly %}
-                            <p>{{ field.contents }}</p>
-                          {% else %}
-                            {{ field.field.errors.as_ul }}
-                            {{ field.field }}
-                          {% endif %}
-                        </td>
-                      {% endfor %}
-                    {% endfor %}
-                  {% endfor %}
+              <tr class="level">
+                <td colspan="2">{{ level_formset.grouper }}</td>
+                {% for inline_admin_form in commitment_level_formset.list %}
+                    {% include "admin/edit_inline/inline_fields.html" %}
                 {% endfor %}
               </tr>
 
-              {% for inline_admin_form in level_formset.list %}
-                {% if inline_admin_form.form.non_field_errors %}
-                  <tr class="row-form-errors"><td colspan="{{ inline_admin_form|cell_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
-                {% endif %}
-                <tr class="form-row {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}{% if forloop.last and condition_objective_formset.has_add_permission %} empty-form{% endif %}"
-                id="{{ condition_objective_formset.formset.prefix }}-{% if forloop.last and condition_objective_formset.has_add_permission %}empty{% else %}{{ forloop.counter0 }}{% endif %}">
+              {% include "admin/edit_inline/project-objective-condition-rows.html" %}
 
-                  {% comment %} need to find a better place for this {% endcomment %}
-                  {% if inline_admin_form.needs_explicit_pk_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
-                  {% if inline_admin_form.fk_field %}{{ inline_admin_form.fk_field.field }}{% endif %}
-
-                  {% comment %} the actual fields {% endcomment %}
-                  {% for fieldset in inline_admin_form %}
-                    {% for line in fieldset %}
-                      {% for field in line %}
-                        <td class="{% if field.field.name %}field-{{ field.field.name }}{% endif %}{% if field.field.is_hidden %} hidden{% endif %}">
-                          {% if field.is_readonly %}
-                            <p>{{ field.contents }}</p>
-                          {% else %}
-                            {{ field.field.errors.as_ul }}
-                            {{ field.field }}
-                          {% endif %}
-                        </td>
-                      {% endfor %}
-                    {% endfor %}
-                  {% endfor %}
-                </tr>
-              {% endfor %}
             {% endfor %}
           {% endfor %}
         </tbody>
       </table>
-      {% if condition_objective_formset.is_collapsible %}</details>{% endif %}
     </fieldset>
   </div>
 </div>
 
-{{ commitment_formset.formset.management_form }}
 

@@ -11,6 +11,7 @@ def work_cycle_commitment(work_cycle, project, objective, level):
     ).committed
 
 
-@register.filter(name="zip")
-def zip_lists(a, b):
-    return zip(a, b)
+@register.simple_tag
+def pack(*args):
+    return zip(*args)
+
