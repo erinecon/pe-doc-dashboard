@@ -48,14 +48,11 @@ class Project(models.Model):
                     project=self, objective=objective, condition=condition
                 )
 
-
-
         # make sure there's a QI object for this Project for each WorkCycle
         for work_cycle in WorkCycle.objects.all():
             QI.objects.get_or_create(workcycle=work_cycle, project=self)
 
             # make sure there is a LevelCommitment for each WorkCycle/Level/Objective for the Project
-            print(work_cycle)
             for objective in Objective.objects.filter(project=self):
                 for level in Level.objects.all():
                     print(level)
@@ -65,8 +62,6 @@ class Project(models.Model):
                         objective=objective,
                         level=level,
                     )
-
-
 
     def quality_indicator(self):
         x = 0
@@ -129,21 +124,24 @@ class ProjectObjective(models.Model):
 
     def status(self):
         for level in reversed(Level.objects.all()):
-            if ProjectObjectiveCondition.objects.filter(
+            if not ProjectObjectiveCondition.objects.filter(
                 project=self.project,
                 objective=self.objective,
                 condition__level=level,
-                done=True,
-            ):
+                done=False,
+            ).exists():
                 return level
 
-        return self.get_if_not_started_display()
+        return self.get_if_not_started_display() or "No activity"
 
     def status_slug(self):
         return slugify(self.status())
 
     def name(self):
         return self.objective.name
+
+    def description(self):
+        return self.objective.description
 
     class Meta:
         ordering = ["project", "objective"]

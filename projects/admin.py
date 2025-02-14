@@ -55,11 +55,27 @@ class ProjectObjectiveInline(admin.TabularInline):
     inlines = [ProjectObjectiveConditionInline]
     max_num = 0
     can_delete = False
-    readonly_fields = ["name", "status"]
-    exclude = ["if_not_started", "objective"]
+    # fields = ("name", "description", "status",  "if_not_started")
+    fieldsets = (
+        (
+            "name",
+            {"fields": (("name",)), "classes": ["objective-name"]},
+        ),
+        ("description", {"fields": (("description",))}),
+        ("status", {"fields": (("status",))}),
+        ("if-not-started", {"fields": (("if_not_started",))}),
+    )
+    readonly_fields = ["name", "description", "status"]
+    exclude = ["objective"]
+
+    def has_add_permission(self, request, obj):
+        return False
+
+    def has_delete_permission(self, request, obj):
+        return False
 
 
-@admin.register(ProjectObjective)
+# @admin.register(ProjectObjective)
 class ProjectObjectiveAdmin(admin.ModelAdmin):
     readonly_fields = ["project", "objective", "status"]
 
@@ -86,12 +102,16 @@ class ProjectObjectiveAdmin(admin.ModelAdmin):
         )
 
 
-
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    inlines = [ProjectObjectiveConditionInline, LevelCommitmentInline]
+    inlines = [
+        ProjectObjectiveInline,
+        ProjectObjectiveConditionInline,
+        LevelCommitmentInline,
+    ]
     list_display = ["name", "owner", "driver", "last_review", "last_review_status"]
     change_form_template = "admin/project_change_form.html"
+    save_on_top = True
 
     fieldsets = (
         (
@@ -109,6 +129,8 @@ class ProjectAdmin(admin.ModelAdmin):
     def change_view(self, request, object_id, form_url="", extra_context=None):
         extra_context = extra_context or {}
         extra_context["work_cycles"] = WorkCycle.objects.all()
+        extra_context["show_save_and_add_another"] = False
+
         return super().change_view(
             request,
             object_id,
@@ -118,6 +140,6 @@ class ProjectAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ProjectGroup)
-admin.site.register(QI)
-admin.site.register(ProjectObjectiveCondition)
 admin.site.register(LevelCommitment)
+# admin.site.register(QI)
+# admin.site.register(ProjectObjectiveCondition)

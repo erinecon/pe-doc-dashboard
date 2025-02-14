@@ -27,25 +27,25 @@
             <tr>
                 <th class="sticky" scope="row"><a href="{% url 'admin:projects_project_change' project.id %}">{{ project }}</a></th>
                 <td><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.owner }}</a></td>
-                <td><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.driver }}</a></td>
+                <td><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.driver|default:"" }}</a></td>
                 <td class="{{ project.review_freshness }}"><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.last_review|default:"never" }}</a></td>
-                
+
                 {% for qi in project.quality_history %}<td>{{ qi.value }}</td>{% endfor %}
-                
+
                 <td><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.quality_indicator }}</a></td>
                 <td class="{{ project.last_review_status|slugify }}"><a href="{% url 'admin:projects_project_change' project.id %}">{{ project.last_review_status }}</a></td>
-                
+
                 {% for objective in project.projectobjective_set.all %}
                     <td class="{{ objective.status_slug }}">
-                        <a href="{% url 'admin:projects_projectobjective_change' objective.id %}">
+                        <a href="{% url 'admin:projects_project_change' project.id %}">
                             {{ objective.status|default:"---" }}
                         </a>
                     </td>
                 {% endfor %}
-                
+
             </tr>
         {% endfor %}
 
     </table>
-</div>    
+</div>
 {% endblock %}

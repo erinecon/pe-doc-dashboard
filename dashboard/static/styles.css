@@ -7,8 +7,8 @@ div.wrapper {
     margin-bottom: 10px;
     border: solid black 1px;
 }
-      
-table {  
+
+table {
     table-layout: fixed;
     /* border-collapse: collapse; */
 }
