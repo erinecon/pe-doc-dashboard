@@ -53,7 +53,6 @@ class Project(models.Model):
             QI.objects.get_or_create(workcycle=work_cycle, project=self)
 
             # make sure there is a LevelCommitment for each WorkCycle/Level/Objective for the Project
-            print(work_cycle)
             for objective in Objective.objects.filter(project=self):
                 for level in Level.objects.all():
                     print(level)
