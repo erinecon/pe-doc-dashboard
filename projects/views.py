@@ -12,4 +12,13 @@ class ProjectListView(ListView):
         context = super().get_context_data(**kwargs)
         context["workcycle_list"] = WorkCycle.objects.all()
         context["objective_list"] = Objective.objects.all()
+
+        context["workcycle_count"] = WorkCycle.objects.count()
+        context["objective_count"] = Objective.objects.count()
+        context["column_count"] = Objective.objects.count() + WorkCycle.objects.count() + 6
+
+        context["quality_cols_count"] = 3 + WorkCycle.objects.count()
+
+
+
         return context
