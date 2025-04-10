@@ -1,0 +1,6 @@
+Django==5.1.5
+PyYAML==6.0.2
+docutils==0.21.2
+whitenoise==6.9.0
+psycopg2-binary==2.9.10
+tzdata==2025.1
